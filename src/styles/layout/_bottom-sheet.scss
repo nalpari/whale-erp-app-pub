@@ -40,15 +40,15 @@
   padding-bottom: 12px;
   border-bottom: 1px solid #ededed;
   h3 {
-    @include fontDefinition(18px, 600, 140%);
-    color: #1a1a1a;
+    @include fontDefinition($font-ds-20, $font-w-700, $line-h-140);
+    color: #111;
   }
   .bt-sh-btn-wrap {
     margin-left: auto;
   }
 }
 .bottom-sheet-footer {
-  @include flex(6px);
+  @include flex(8px);
   align-items: center;
   button {
     flex: 1;

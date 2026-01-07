@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/style.scss";
+import PopupControler from "@/components/ui/PopupControler";
+import BottomSheetControler from "@/components/ui/BottomSheetControler";
 
 export const metadata: Metadata = {
   title: "Whale ERP",
@@ -12,8 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        {children}
+        <PopupControler />
+        <BottomSheetControler />
+      </body>
     </html>
   );
 }

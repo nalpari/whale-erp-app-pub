@@ -1,35 +1,39 @@
-// "use client";
+"use client";
 
-// import { useEffect } from "react";
-// import { useBottomSheetControler } from "@/store/useBottomSheetControler";
-// import LocationSheet from "../bottomSheet/LocationSheet";
+import { useEffect } from "react";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import StoreSelectSheet from "../bottomsheet/StoreSelectSheet";
+import GoToOptionSheet from "../bottomsheet/GoToOptionSheet";
 
-// export default function BottomSheetControler() {
-//   const bottomSheetControler = useBottomSheetControler();
+export default function BottomSheetControler() {
+  const bottomSheetControler = useBottomSheetControler();
 
-//   useEffect(() => {
-//     // 모든 팝업 상태를 배열로 확인
-//     const isAnyBottomSheetOpen =
-//       bottomSheetControler.locationSheet ||
+  useEffect(() => {
+    // 모든 팝업 상태를 배열로 확인
+    const isAnyBottomSheetOpen =
+      bottomSheetControler.storeSelectSheet ||
+      bottomSheetControler.goToOptionSheet;
 
-//     // body 클래스 토글
-//     if (isAnyBottomSheetOpen) { // eslint-disable-line
-//       document.body.classList.add("open");
-//     } else {
-//       document.body.classList.remove("open");
-//     }
+    // body 클래스 토글
+    if (isAnyBottomSheetOpen) {
+      document.body.classList.add("open");
+    } else {
+      document.body.classList.remove("open");
+    }
 
-//     // 컴포넌트 언마운트 시 클래스 제거
-//     return () => {
-//       document.body.classList.remove("open");
-//     };
-//   }, [
-//     bottomSheetControler.locationSheet,
-//   ]);
+    // 컴포넌트 언마운트 시 클래스 제거
+    return () => {
+      document.body.classList.remove("open");
+    };
+  }, [
+    bottomSheetControler.storeSelectSheet,
+    bottomSheetControler.goToOptionSheet,
+  ]);
 
-//   return (
-//     <>
-//       {bottomSheetControler.locationSheet && <LocationSheet />}
-//     </>
-//   );
-// }
+  return (
+    <>
+      {bottomSheetControler.storeSelectSheet && <StoreSelectSheet />}
+      {bottomSheetControler.goToOptionSheet && <GoToOptionSheet />}
+    </>
+  );
+}

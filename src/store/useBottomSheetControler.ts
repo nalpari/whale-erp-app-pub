@@ -1,13 +1,17 @@
 import { create } from "zustand";
 
 type BottomSheetControlerState = {
-  locationSheet: boolean;
-  setLocationSheet: (isOpen: boolean) => void;
+  storeSelectSheet: boolean;
+  setStoreSelectSheet: (isOpen: boolean) => void;
+  goToOptionSheet: boolean;
+  setGoToOptionSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>(
   (set) => ({
-    locationSheet: false,
-    setLocationSheet: (isOpen: boolean) => set({ locationSheet: isOpen }),
+    storeSelectSheet: false,
+    setStoreSelectSheet: (isOpen: boolean) => set({ storeSelectSheet: isOpen }),
+    goToOptionSheet: false,
+    setGoToOptionSheet: (isOpen: boolean) => set({ goToOptionSheet: isOpen }),
   })
 );

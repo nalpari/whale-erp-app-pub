@@ -1,21 +1,14 @@
 import { create } from "zustand";
 
 type PopupControlerState = {
-  mapPopup: boolean;
-
-  setMapPopup: (isOpen: boolean) => void;
+  aiChatPopup: boolean;
+  setAiChatPopup: (isOpen: boolean) => void;
+  alertPopup: boolean;
+  setAlertPopup: (isOpen: boolean) => void;
 };
-
-type InitialStateType = {
-  mapPopup: boolean;
-};
-
-const initialState: InitialStateType = {
-  mapPopup: false,
-};
-
 export const usePopupControler = create<PopupControlerState>((set) => ({
-  ...initialState,
-  setMapPopup: (isOpen: boolean) =>
-    set((state) => ({ ...state, mapPopup: isOpen })),
+  aiChatPopup: false,
+  setAiChatPopup: (isOpen: boolean) => set({ aiChatPopup: isOpen }),
+  alertPopup: false,
+  setAlertPopup: (isOpen: boolean) => set({ alertPopup: isOpen }),
 }));

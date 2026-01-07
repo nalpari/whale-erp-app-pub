@@ -1,1 +1,142 @@
 @use "../abstracts" as *;
+
+.main-container {
+  flex: 1;
+  padding: 12px 24px 66px;
+}
+.main-contents {
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.day-flow-wrap {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  .day-flow-btn {
+    flex: none;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url("/assets/images/layout/day_flow_arr.svg") no-repeat center
+      center;
+    background-size: cover;
+    &.next {
+      transform: rotate(180deg);
+    }
+  }
+  .day-text {
+    flex: 1;
+    text-align: center;
+    @include fontDefinition($font-ds-18, $font-w-500, $line-h-140);
+    color: #111111;
+  }
+}
+
+.total-sales-wrap {
+  padding: 28px 24px 20px;
+  background-color: #3e4959;
+  border-radius: 32px;
+}
+.update-wrap {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555f6d;
+  .update-tit {
+    @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+    color: #f2f2f2;
+  }
+  .update-val {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #f2f2f2;
+  }
+  .update-reset-btn {
+    margin-left: auto;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    background: url("/assets/images/main/reset_icon.svg") no-repeat center
+      center;
+    background-size: cover;
+  }
+}
+
+.sales-value-wrap {
+  padding: 17px 0 15px;
+  border-bottom: 1px solid #555f6d;
+  .sales-value {
+    @include fontDefinition($font-ds-28, $font-w-700, $line-h-150);
+    color: #b1ffc3;
+  }
+  .sales-revenue {
+    @include fontDefinition($font-ds-16, $font-w-400, $line-h-150);
+    color: #f2f2f2;
+    span {
+      font-weight: $font-w-700;
+      color: #b1ffc3;
+    }
+  }
+}
+
+.total-sales-data {
+  padding-top: 24px;
+  .sales-data-list {
+    @include flex(10px);
+    flex-direction: column;
+  }
+  .sales-data {
+    .sales-data-tit {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: #f2f2f2;
+    }
+    .sales-data-val {
+      margin-left: auto;
+      @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+      color: #f2f2f2;
+    }
+  }
+}
+
+.go-to-wrap {
+  margin-bottom: 36px;
+}
+.go-to-header-wrap {
+  margin-bottom: 12px;
+  .go-to-header-tit {
+    @include fontDefinition($font-ds-18, $font-w-700, $line-h-140);
+    color: #111;
+  }
+  .go-to-header-btn {
+    margin-left: auto;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    background: url("/assets/images/main/go_to_icon.svg") no-repeat center
+      center;
+    background-size: cover;
+  }
+}
+
+.go-to-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  .go-to-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 10px;
+    border: 1px solid #eee;
+    background-color: #f8f8f9;
+    border-radius: 32px;
+    .go-to-logo {
+      position: relative;
+      margin-bottom: 6px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    }
+    .go-to-name {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: #111111;
+    }
+  }
+}
