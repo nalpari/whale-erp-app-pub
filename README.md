@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whale ERP App
 
-## Getting Started
+ERP 애플리케이션 프로젝트입니다.
 
-First, run the development server:
+## 기술 스택
+
+- **Next.js 16** - App Router
+- **React 19** - React Compiler 활성화
+- **TypeScript** - Strict 모드
+- **Tailwind CSS 4** - 유틸리티 기반 스타일링
+
+## 시작하기
+
+### 설치
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 개발 서버 실행
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
 
-## Learn More
+### 프로덕션 빌드
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 린트 실행
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm lint
+```
 
-## Deploy on Vercel
+## 프로젝트 구조
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+└── app/
+    ├── layout.tsx    # 루트 레이아웃
+    ├── page.tsx      # 홈페이지
+    ├── globals.css   # 전역 스타일
+    └── favicon.ico
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 경로 별칭
+
+`@/*` 경로 별칭이 `./src/*`에 매핑되어 있습니다.
+
+```typescript
+import { Component } from "@/components/Component";
+```
