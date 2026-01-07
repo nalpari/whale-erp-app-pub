@@ -43,7 +43,7 @@
     padding: 12px 16px;
     border-radius: 6px;
     background-color: #f4f5f6;
-    @include fontDefinition($font-ds-15, $font-w-600, 22px);
+    @include fontDefinition($font-ds-15, $font-w-600, 25px);
     color: #111;
     span {
       display: block;
