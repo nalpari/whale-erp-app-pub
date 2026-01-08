@@ -87,6 +87,52 @@
 
 // 시간설정
 .time-select-wrap {
-  padding: 0 24px 34px;
+  @include flex(0px);
+  padding: 24px 24px 34px;
   background-color: #f4f5f6;
+  .start-end-time-wrap {
+    .start-end-swiper {
+      height: 160px;
+    }
+    .swiper-slide-active {
+      .time-tit {
+        color: #111;
+      }
+    }
+    .time-tit {
+      @include flex(0px);
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #ddd;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+}
+.time-swiper-wrap {
+  margin-left: auto;
+  padding-right: 45px;
+  @include flex(15px);
+  .time-swiper {
+    height: 160px;
+  }
+  .swiper-slide-active {
+    .time-num {
+      color: #111;
+    }
+  }
+  .time-num {
+    @include flex(0px);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @include fontDefinition($font-ds-28, $font-w-600, $line-h-140);
+    color: #ddd;
+    transition: all 0.15s ease-in-out;
+  }
+  .time-colon {
+    @include fontDefinition($font-ds-28, $font-w-600, 156px);
+    color: #111;
+  }
 }

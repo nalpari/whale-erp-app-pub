@@ -32,18 +32,64 @@ export default function TimeSelectSheet() {
           <div className="bottom-sheet time">
             <div className="bottom-sheet-header">
               <h3>시간설정</h3>
+              <div className="bt-sh-btn-wrap">
+                <button className="btn-s black">저장</button>
+              </div>
             </div>
             <div className=" bottom-sheet-body">
               <div className="time-select-wrap">
                 <div className="start-end-time-wrap">
                   <Swiper
+                    slidesPerView={3}
                     direction={"vertical"}
-                    className="mySwiper"
+                    className="start-end-swiper"
                     centeredSlides={true}
+                    spaceBetween={0}
                   >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>
+                      <div className="time-tit">시작시간</div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="time-tit">종료시간</div>
+                    </SwiperSlide>
                   </Swiper>
+                </div>
+                <div className="time-swiper-wrap">
+                  <div className="hour-swiper-wrap">
+                    <Swiper
+                      slidesPerView={3}
+                      direction={"vertical"}
+                      className="time-swiper"
+                      centeredSlides={true}
+                      spaceBetween={0}
+                      loop={true}
+                    >
+                      {Array.from({ length: 24 }).map((_, index) => (
+                        <SwiperSlide key={index}>
+                          <div className="time-num">
+                            {index < 10 ? `0${index}` : index}
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                  <div className="time-colon">:</div>
+                  <div className="minute-swiper-wrap">
+                    <Swiper
+                      slidesPerView={3}
+                      direction={"vertical"}
+                      className="time-swiper"
+                      centeredSlides={true}
+                      spaceBetween={0}
+                    >
+                      <SwiperSlide>
+                        <div className="time-num">00</div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="time-num">30</div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
                 </div>
               </div>
             </div>
