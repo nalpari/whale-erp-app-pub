@@ -65,6 +65,30 @@
     center;
   background-size: cover;
 }
+.data-filed {
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .filed-tit {
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+    color: #111111;
+    margin-bottom: 10px;
+    &.sub {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: #767676;
+    }
+  }
+}
+.warning {
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+  color: #f00;
+}
+.s-txt {
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+  color: #505050;
+}
+
 // 점포정보 관리
 .search-bx {
   @include flex(0px);
@@ -110,8 +134,63 @@
   }
 }
 
-// 점포 목록
+// 페이지네이션
+.content-pagination {
+  background-color: #f4f5f6;
+  padding: 24px;
+  padding-top: 0;
+}
+.pagination-wrap {
+  @include flex(8px);
+  align-items: center;
+  justify-content: center;
+  .page-num {
+    @include flex(3px);
+    align-items: center;
+    padding: 0 13px;
+    span {
+      @include fontDefinition($font-ds-16, $font-w-400, $line-h-140);
+      color: #111;
+      &.current {
+        font-weight: $font-w-700;
+        color: #f37362;
+      }
+    }
+  }
+}
+.page-btn {
+  @include flex(8px);
+  align-items: center;
+  height: 42px;
+  padding: 0 22px;
+  border-radius: 100px;
+  background-color: #717171;
+  color: #fff;
+  @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+  transition: all 0.15s ease-in-out;
+  .icon-arrow {
+    display: block;
+    width: 7px;
+    height: 12px;
+    background: url("/assets/images/contents/cont_page_arr.svg") no-repeat
+      center center;
+    background-size: cover;
+    &.right {
+      transform: rotate(180deg);
+    }
+  }
+  &:disabled {
+    background-color: #e4e4e5;
+    color: #767676;
+    cursor: default;
+    .icon-arrow {
+      background: url("/assets/images/contents/cont_page_arr_disabled.svg")
+        no-repeat center center;
+    }
+  }
+}
 
+// 점포 목록
 .store-list-name {
   @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
   color: #111111;
@@ -135,12 +214,12 @@
       @include ellipsis(1);
     }
   }
-  .store-img-btn-wrap {
-    margin-left: auto;
-    flex: none;
-    @include flex(6px);
-    align-items: center;
-  }
+}
+.store-img-btn-wrap {
+  margin-left: auto;
+  flex: none;
+  @include flex(6px);
+  align-items: center;
   .img-delete {
     display: block;
     width: 24px;
@@ -156,5 +235,33 @@
     background: url("/assets/images/contents/img_show.svg") no-repeat center
       center;
     background-size: cover;
+  }
+}
+
+// 점포 사진
+.store-img-list-tit {
+  @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+  color: #111111;
+  margin-bottom: 10px;
+}
+.store-img-list {
+  @include flex(8px);
+  flex-direction: column;
+  margin-top: 20px;
+}
+.store-img-bx {
+  @include flex(8px);
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #f4f5f6;
+  border-radius: 6px;
+  .store-img-tit {
+    @include flex(2px);
+    align-items: center;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #505050;
+    .img-tit {
+      @include ellipsis(1);
+    }
   }
 }

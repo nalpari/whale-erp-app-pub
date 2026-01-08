@@ -22,7 +22,12 @@ export default function StoreInfoList() {
       <div className="sub-tit-wrap">
         <div className="sub-tit">점포정보 관리</div>
         <div className="sub-btn-wrap">
-          <button className="btn-s black">등록</button>
+          <button
+            className="btn-s black"
+            onClick={() => router.push("/storeinfo/create")}
+          >
+            등록
+          </button>
         </div>
       </div>
       <div className="sub-content-body">

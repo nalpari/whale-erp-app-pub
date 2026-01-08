@@ -71,6 +71,16 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2025-12-24</td>
                   </tr>
+                  <tr>
+                    <td>점포 정보보</td>
+                    <td></td>
+                    <td>
+                      <Link href={"/storeinfo"}>StoreInfoList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

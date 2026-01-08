@@ -42,6 +42,26 @@
     color: #fff;
   }
 }
+.outline-g {
+  background-color: #fff;
+  color: #767676;
+  border: 1px solid #ddd;
+  transition: all 0.15s ease-in-out;
+  &.act {
+    background-color: #505050;
+    border-color: #505050;
+    color: #fff;
+  }
+}
+/*************** icon *************/
+.camera {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/contents/camera_icon.svg") no-repeat center
+    center;
+  background-size: cover;
+}
 
 /******************** btn-type 모음 *****************/
 // btn-frame 공통
