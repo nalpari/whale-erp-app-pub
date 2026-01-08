@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
 
+.default-tit {
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+  color: #111111;
+}
 // 점포 선택
 .store-list {
   @include flex(10px);
@@ -74,4 +78,15 @@
     color: #111111;
     margin-bottom: 10px;
   }
+}
+
+// 사진등록
+.camera-select-wrap {
+  padding-top: 24px;
+}
+
+// 시간설정
+.time-select-wrap {
+  padding: 0 24px 34px;
+  background-color: #f4f5f6;
 }

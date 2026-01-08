@@ -1,11 +1,20 @@
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+
 export default function StoreForm03() {
+  const setPhotoSelectSheet = useBottomSheetControler(
+    (state) => state.setPhotoSelectSheet
+  );
+
   return (
     <div className="sub-cont-wrap">
       <div className="sub-cont-item-wrap">
         <div className="sub-item-bx">
           <div className="store-img-list-tit">점포사진</div>
           <div className="block">
-            <button className="btn-form block blue">
+            <button
+              className="btn-form block blue"
+              onClick={() => setPhotoSelectSheet(true)}
+            >
               <i className="camera"></i>사진 등록하기
             </button>
           </div>

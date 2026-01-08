@@ -54,3 +54,12 @@
     flex: 1;
   }
 }
+.bottom-sheet {
+  &.time {
+    padding: 0;
+    .bottom-sheet-header {
+      padding: 0 24px 12px;
+      border-bottom: 1px solid #ededed;
+    }
+  }
+}
