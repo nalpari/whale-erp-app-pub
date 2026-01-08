@@ -4,15 +4,19 @@ import { useEffect } from "react";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import StoreSelectSheet from "../bottomsheet/StoreSelectSheet";
 import GoToOptionSheet from "../bottomsheet/GoToOptionSheet";
+import StoreSearchSheet from "../bottomsheet/StoreSearchSheet";
 
 export default function BottomSheetControler() {
-  const bottomSheetControler = useBottomSheetControler();
+  const storeSelectSheet = useBottomSheetControler((state) => state.storeSelectSheet);
+  const goToOptionSheet = useBottomSheetControler((state) => state.goToOptionSheet);
+  const storeSearchSheet = useBottomSheetControler((state) => state.storeSearchSheet);
 
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
     const isAnyBottomSheetOpen =
-      bottomSheetControler.storeSelectSheet ||
-      bottomSheetControler.goToOptionSheet;
+      storeSelectSheet ||
+      goToOptionSheet ||
+      storeSearchSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -26,14 +30,16 @@ export default function BottomSheetControler() {
       document.body.classList.remove("open");
     };
   }, [
-    bottomSheetControler.storeSelectSheet,
-    bottomSheetControler.goToOptionSheet,
+    storeSelectSheet,
+    goToOptionSheet,
+    storeSearchSheet,
   ]);
 
   return (
     <>
-      {bottomSheetControler.storeSelectSheet && <StoreSelectSheet />}
-      {bottomSheetControler.goToOptionSheet && <GoToOptionSheet />}
+      {storeSelectSheet && <StoreSelectSheet />}
+      {goToOptionSheet && <GoToOptionSheet />}
+      {storeSearchSheet && <StoreSearchSheet />}
     </>
   );
 }

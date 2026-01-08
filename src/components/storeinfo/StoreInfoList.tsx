@@ -1,11 +1,24 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function StoreInfoList() {
   const router = useRouter();
-  const dataLength = 4;
+  const setStoreSearchSheet = useBottomSheetControler(
+    (state) => state.setStoreSearchSheet
+  );
+  const dataLength = 4; // 데이터 개수 더미
+
+  const handleSearchClick = () => {
+    setStoreSearchSheet(true);
+  };
+
+  const handleItemClick = (index: number) => {
+    router.push(`/storeinfo/${index}`);
+  };
+
   return (
-    <div className="container sub">
+    <div className="container">
       <div className="sub-tit-wrap">
         <div className="sub-tit">점포정보 관리</div>
         <div className="sub-btn-wrap">
@@ -17,19 +30,17 @@ export default function StoreInfoList() {
           <div className="search-count">
             검색결과 <span>128건</span>
           </div>
-          <button className="search-btn act">
+          <button className="search-btn act" onClick={handleSearchClick}>
             <i className="icon-search"></i>
             <span>검색</span>
           </button>
         </div>
-        <div className="store-list-wrap">
+        <div className="sub-cont-wrap">
           {Array.from({ length: dataLength }).map((_, index) => (
             <button
               className="sub-item-bx"
               key={index}
-              onClick={() => {
-                router.push(`/storeinfo/${index}`);
-              }}
+              onClick={() => handleItemClick(index)}
             >
               <div className="store-list-name">
                 힘이나는커피생활 을지로3가점
@@ -43,8 +54,8 @@ export default function StoreInfoList() {
                   <tr>
                     <th>운영여부</th>
                     <td>
-                      <div className="badge blue">운영</div>
-                      <div className="badge red">미운영</div>
+                      <span className="badge blue">운영</span>
+                      <span className="badge red">미운영</span>
                     </td>
                   </tr>
                   <tr>

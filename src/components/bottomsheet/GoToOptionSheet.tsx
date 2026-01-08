@@ -4,13 +4,22 @@ import { usePopupControler } from "@/store/usePopupControler";
 import { Sheet } from "react-modal-sheet";
 
 export default function GoToOptionSheet() {
-  const bottomSheetControler = useBottomSheetControler();
-  const popupControler = usePopupControler();
+  const goToOptionSheet = useBottomSheetControler((state) => state.goToOptionSheet);
+  const setGoToOptionSheet = useBottomSheetControler((state) => state.setGoToOptionSheet);
+  const setAlertPopup = usePopupControler((state) => state.setAlertPopup);
+
+  const handleClose = () => {
+    setGoToOptionSheet(false);
+  };
+
+  const handleSetAlert = () => {
+    setAlertPopup(true);
+  };
 
   return (
     <Sheet
-      isOpen={bottomSheetControler.goToOptionSheet}
-      onClose={() => bottomSheetControler.setGoToOptionSheet(false)}
+      isOpen={goToOptionSheet}
+      onClose={handleClose}
       detent="content"
       disableScrollLocking={true}
     >
@@ -123,7 +132,7 @@ export default function GoToOptionSheet() {
               <button className="btn-form sky">초기화</button>
               <button
                 className="btn-form blue"
-                onClick={() => popupControler.setAlertPopup(true)}
+                onClick={handleSetAlert}
               >
                 설정
               </button>
@@ -131,9 +140,7 @@ export default function GoToOptionSheet() {
           </div>
         </Sheet.Content>
       </Sheet.Container>
-      <Sheet.Backdrop
-        onTap={() => bottomSheetControler.setGoToOptionSheet(false)}
-      />
+      <Sheet.Backdrop onTap={handleClose} />
     </Sheet>
   );
 }

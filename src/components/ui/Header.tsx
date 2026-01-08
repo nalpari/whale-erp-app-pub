@@ -1,22 +1,27 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import StoreSelect from "./StoreSelect";
 
 export default function Header() {
   const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
+  const router = useRouter();
 
-  // URL 세그먼트가 2개 이상인 경우 (예: /storeinfo/detail)
+  const segments = pathname.split("/").filter(Boolean);
   const isSubPage = segments.length >= 2;
+
+  const handleBack = () => {
+    router.back();
+  };
 
   if (isSubPage) {
     return (
       <header className="header sub">
         <div className="header-container">
           <div className="header-inner">
-            <button className="btn-back">뒤로가기</button>
+            <button className="btn-back" onClick={handleBack}></button>
             <h1>서브 페이지 헤더</h1>
+            <button className="btn-delete"></button>
           </div>
         </div>
       </header>

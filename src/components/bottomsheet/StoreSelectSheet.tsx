@@ -3,12 +3,17 @@ import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import { Sheet } from "react-modal-sheet";
 
 export default function StoreSelectSheet() {
-  const bottomSheetControler = useBottomSheetControler();
+  const storeSelectSheet = useBottomSheetControler((state) => state.storeSelectSheet);
+  const setStoreSelectSheet = useBottomSheetControler((state) => state.setStoreSelectSheet);
+
+  const handleClose = () => {
+    setStoreSelectSheet(false);
+  };
 
   return (
     <Sheet
-      isOpen={bottomSheetControler.storeSelectSheet}
-      onClose={() => bottomSheetControler.setStoreSelectSheet(false)}
+      isOpen={storeSelectSheet}
+      onClose={handleClose}
       detent="content"
       disableScrollLocking={true}
     >
@@ -45,9 +50,7 @@ export default function StoreSelectSheet() {
           </div>
         </Sheet.Content>
       </Sheet.Container>
-      <Sheet.Backdrop
-        onTap={() => bottomSheetControler.setStoreSelectSheet(false)}
-      />
+      <Sheet.Backdrop onTap={handleClose} />
     </Sheet>
   );
 }

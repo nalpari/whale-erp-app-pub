@@ -8,10 +8,15 @@
     padding: 5px 0;
     @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
     color: #767676;
+    vertical-align: top;
   }
   td {
     padding: 5px 0;
     @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
     color: #111111;
+    .sub-txt {
+      @include fontDefinition($font-ds-14, $font-w-400, $line-h-140);
+      color: #505050;
+    }
   }
 }

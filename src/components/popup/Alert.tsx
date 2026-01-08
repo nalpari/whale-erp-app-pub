@@ -2,7 +2,12 @@
 import { usePopupControler } from "@/store/usePopupControler";
 
 export default function Alert() {
-  const popupControler = usePopupControler();
+  const setAlertPopup = usePopupControler((state) => state.setAlertPopup);
+
+  const handleClose = () => {
+    setAlertPopup(false);
+  };
+
   return (
     <div className="modal-popup alert">
       <div className="modal-dialog">
@@ -16,13 +21,13 @@ export default function Alert() {
                 {/* alert 팝업시 취소 버튼 숨김 confirm 팝업시 취소 버튼 노출 */}
                 {/* <button
                   className="btn-form outline min block"
-                  onClick={() => popupControler.setAlertPopup(false)}
+                  onClick={handleClose}
                 >
                   취소
                 </button> */}
                 <button
                   className="btn-form black min block"
-                  onClick={() => popupControler.setAlertPopup(false)}
+                  onClick={handleClose}
                 >
                   선택
                 </button>

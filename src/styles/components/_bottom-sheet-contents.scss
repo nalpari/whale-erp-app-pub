@@ -61,3 +61,17 @@
     padding-top: 20px;
   }
 }
+
+// 검색조건
+.sheet-data-wrap {
+  padding: 24px 0;
+  @include flex(24px);
+  flex-direction: column;
+}
+.sheet-data-filed {
+  .filed-tit {
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #111111;
+    margin-bottom: 10px;
+  }
+}

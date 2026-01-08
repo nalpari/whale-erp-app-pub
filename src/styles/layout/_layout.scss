@@ -13,6 +13,7 @@
   padding-bottom: 66.4px;
   background-color: #f4f5f6;
   &.sub {
+    padding-bottom: 0;
   }
 }
 // header
@@ -20,6 +21,39 @@
   position: relative;
   width: 100%;
   height: 85px;
+  &.sub {
+    height: 67px;
+    .header-inner {
+      position: relative;
+      @include flex(0);
+      align-items: center;
+      padding: 17px 24px;
+      border-bottom: 1px solid #f2f0f0;
+      h1 {
+        position: absolute;
+        @include absoluteCenter;
+        @include fontDefinition($font-ds-22, $font-w-700, $line-h-140);
+        color: #111111;
+      }
+      .btn-back {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url("/assets/images/layout/btn_back.svg") no-repeat center
+          center;
+        background-size: cover;
+      }
+      .btn-delete {
+        margin-left: auto;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url("/assets/images/layout/btn_delete.svg") no-repeat center
+          center;
+        background-size: cover;
+      }
+    }
+  }
 }
 .header-container {
   position: fixed;
@@ -32,6 +66,7 @@
 .header-inner {
   padding: 18px 24px 12px;
 }
+
 // store select
 .store-select {
   position: relative;

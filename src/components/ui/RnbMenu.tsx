@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 
 export default function RnbMenu() {
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
-  const router = useRouter();
   const closeMenu = useMenuStore((state) => state.closeMenu);
+  const router = useRouter();
 
   useEffect(() => {
     if (isMenuOpen) {

@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
 type PopupControlerState = {
   aiChatPopup: boolean;
@@ -6,9 +7,15 @@ type PopupControlerState = {
   alertPopup: boolean;
   setAlertPopup: (isOpen: boolean) => void;
 };
-export const usePopupControler = create<PopupControlerState>((set) => ({
-  aiChatPopup: false,
-  setAiChatPopup: (isOpen: boolean) => set({ aiChatPopup: isOpen }),
-  alertPopup: false,
-  setAlertPopup: (isOpen: boolean) => set({ alertPopup: isOpen }),
-}));
+
+export const usePopupControler = create<PopupControlerState>()(
+  devtools(
+    (set) => ({
+      aiChatPopup: false,
+      setAiChatPopup: (isOpen: boolean) => set({ aiChatPopup: isOpen }, false, "popup/setAiChat"),
+      alertPopup: false,
+      setAlertPopup: (isOpen: boolean) => set({ alertPopup: isOpen }, false, "popup/setAlert"),
+    }),
+    { name: "PopupControlerStore" }
+  )
+);

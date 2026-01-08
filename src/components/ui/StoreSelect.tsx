@@ -3,12 +3,16 @@ import Image from "next/image";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function StoreSelect() {
-  const bottomSheetControler = useBottomSheetControler();
+  const setStoreSelectSheet = useBottomSheetControler((state) => state.setStoreSelectSheet);
+
+  const handleClick = () => {
+    setStoreSelectSheet(true);
+  };
 
   return (
     <button
       className="store-select"
-      onClick={() => bottomSheetControler.setStoreSelectSheet(true)}
+      onClick={handleClick}
     >
       <div className="select-container">
         <div className="select-icon">

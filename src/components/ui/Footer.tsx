@@ -6,37 +6,43 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
-
-  // URL 세그먼트가 2개 이상인 경우 (예: /storeinfo/detail)
-  const isSubPage = segments.length >= 2;
   const router = useRouter();
-  const popupControler = usePopupControler();
+  
+  // selector 패턴으로 필요한 상태만 구독
+  const aiChatPopup = usePopupControler((state) => state.aiChatPopup);
+  const setAiChatPopup = usePopupControler((state) => state.setAiChatPopup);
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   const toggleMenu = useMenuStore((state) => state.toggleMenu);
   const closeMenu = useMenuStore((state) => state.closeMenu);
+
+  const segments = pathname.split("/").filter(Boolean);
+  const isSubPage = segments.length >= 2;
 
   const handleHomeClick = () => {
     closeMenu();
     router.push("/");
   };
+
+  const handleAiClick = () => {
+    setAiChatPopup(true);
+  };
+
   if (isSubPage) {
     return null;
   }
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <button
-          className={`footer-item${popupControler.aiChatPopup ? " act" : ""}`}
-          onClick={() => popupControler.setAiChatPopup(true)}
+          className={`footer-item${aiChatPopup ? " act" : ""}`}
+          onClick={handleAiClick}
         >
           <div className="item-icon ai"></div>
           <div className="item-text">AI</div>
         </button>
         <button
-          className={`footer-item ${
-            popupControler.aiChatPopup || isMenuOpen ? " " : "act"
-          }`}
+          className={`footer-item ${aiChatPopup || isMenuOpen ? " " : "act"}`}
           onClick={handleHomeClick}
         >
           <div className="item-icon home"></div>

@@ -4,22 +4,30 @@ import { useEffect, useState } from "react";
 
 export default function AIChat() {
   const [active, setActive] = useState(false);
-  const popupControler = usePopupControler();
-
   const [mickActive, setMickActive] = useState(false); //마이크 아이콘 노출
+  
+  const aiChatPopup = usePopupControler((state) => state.aiChatPopup);
+  const setAiChatPopup = usePopupControler((state) => state.setAiChatPopup);
+
   useEffect(() => {
     // 팝업 열기 시간 필요
-    setTimeout(() => {
-      setActive(popupControler.aiChatPopup);
+    const timer = setTimeout(() => {
+      setActive(aiChatPopup);
     }, 100);
-  }, [popupControler.aiChatPopup]);
+    
+    return () => clearTimeout(timer);
+  }, [aiChatPopup]);
 
   // 팝업 닫기 시간 필요
   const handleClose = () => {
     setActive(false);
     setTimeout(() => {
-      popupControler.setAiChatPopup(false);
+      setAiChatPopup(false);
     }, 250);
+  };
+
+  const handleMickToggle = () => {
+    setMickActive((prev) => !prev);
   };
 
   return (
@@ -95,7 +103,7 @@ export default function AIChat() {
                   <input type="text" placeholder="Type a message..." />
                   <button
                     className="chat-mick-btn"
-                    onClick={() => setMickActive(!mickActive)}
+                    onClick={handleMickToggle}
                   ></button>
                 </div>
                 <button className="send-message-btn"></button>

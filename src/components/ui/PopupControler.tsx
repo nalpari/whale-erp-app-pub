@@ -6,12 +6,12 @@ import AIChat from "../popup/AIChat";
 import Alert from "../popup/Alert";
 
 export default function PopupControler() {
-  const popupControler = usePopupControler();
+  const aiChatPopup = usePopupControler((state) => state.aiChatPopup);
+  const alertPopup = usePopupControler((state) => state.alertPopup);
 
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
-    const isAnyPopupOpen =
-      popupControler.aiChatPopup || popupControler.alertPopup;
+    const isAnyPopupOpen = aiChatPopup || alertPopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -24,12 +24,12 @@ export default function PopupControler() {
     return () => {
       document.body.classList.remove("open");
     };
-  }, [popupControler.aiChatPopup, popupControler.alertPopup]);
+  }, [aiChatPopup, alertPopup]);
 
   return (
     <>
-      {popupControler.aiChatPopup && <AIChat />}
-      {popupControler.alertPopup && <Alert />}
+      {aiChatPopup && <AIChat />}
+      {alertPopup && <Alert />}
     </>
   );
 }
