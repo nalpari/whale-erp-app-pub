@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useMenuStore } from "@/store/useMenuStore";
+import { useRouter } from "next/navigation";
 
 export default function RnbMenu() {
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
+  const router = useRouter();
+  const closeMenu = useMenuStore((state) => state.closeMenu);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -19,6 +22,11 @@ export default function RnbMenu() {
       document.body.classList.remove("open");
     };
   }, [isMenuOpen]);
+
+  const handleStoreInfoClick = (link: string) => {
+    closeMenu();
+    router.push(link);
+  };
 
   return (
     <div className={`rnb-menu${isMenuOpen ? " act" : ""}`}>
@@ -48,7 +56,11 @@ export default function RnbMenu() {
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">점포관리</dt>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link
+              href="/storeinfo"
+              className="rnb-menu-link"
+              onClick={() => handleStoreInfoClick("/storeinfo")}
+            >
               점포정보 관리
             </Link>
           </dd>

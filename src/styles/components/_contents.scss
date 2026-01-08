@@ -1,1 +1,83 @@
 @use "../abstracts" as *;
+
+.sub-tit-wrap {
+  @include flex(0px);
+  align-items: center;
+  padding: 8px 24px 16px;
+  background-color: #fff;
+  .sub-tit {
+    @include fontDefinition($font-ds-20, $font-w-700, $line-h-140);
+    color: #111111;
+  }
+  .sub-btn-wrap {
+    margin-left: auto;
+    flex: none;
+  }
+}
+.sub-content-body {
+  padding: 24px 24px 32px;
+}
+.sub-item-bx {
+  display: block;
+  text-align: left;
+  padding: 24px 20px 28px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
+    0 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+// 점포정보 관리
+.search-bx {
+  @include flex(0px);
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 18px;
+  .search-count {
+    flex: 1;
+    padding: 9px 20px;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111111;
+    span {
+      font-weight: $font-w-700;
+    }
+  }
+  .search-btn {
+    flex: none;
+    @include flex(4px);
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: auto;
+    border-radius: 0 6px 6px 0;
+    background-color: #77828d;
+    color: #fff;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    transition: all 0.15s ease-in-out;
+    .icon-search {
+      display: none;
+    }
+    &.act {
+      background-color: #0168ff;
+      .icon-search {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: url("/assets/images/contents/search_dot.svg") no-repeat
+          center center;
+        background-size: cover;
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// 점포 목록
+.store-list-wrap {
+  @include flex(12px);
+  flex-direction: column;
+}
+.store-list-name {
+  @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+  color: #111111;
+  margin-bottom: 10px;
+}

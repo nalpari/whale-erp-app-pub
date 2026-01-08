@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  th {
+    padding: 5px 0;
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #767676;
+  }
+  td {
+    padding: 5px 0;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111111;
+  }
+}

@@ -65,7 +65,7 @@ export default function PublishPage() {
                     <td>Main</td>
                     <td></td>
                     <td>
-                      <Link href={"/main"}>Main.tsx</Link>
+                      <Link href={"/"}>Main.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>

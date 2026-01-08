@@ -2,9 +2,14 @@
 
 import { useMenuStore } from "@/store/useMenuStore";
 import { usePopupControler } from "@/store/usePopupControler";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const segments = pathname.split("/").filter(Boolean);
+
+  // URL 세그먼트가 2개 이상인 경우 (예: /storeinfo/detail)
+  const isSubPage = segments.length >= 2;
   const router = useRouter();
   const popupControler = usePopupControler();
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
@@ -15,7 +20,9 @@ export default function Footer() {
     closeMenu();
     router.push("/");
   };
-
+  if (isSubPage) {
+    return null;
+  }
   return (
     <footer className="footer">
       <div className="footer-container">

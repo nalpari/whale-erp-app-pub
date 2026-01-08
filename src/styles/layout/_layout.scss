@@ -10,6 +10,10 @@
 }
 .container {
   flex: 1;
+  padding-bottom: 66.4px;
+  background-color: #f4f5f6;
+  &.sub {
+  }
 }
 // header
 .header {

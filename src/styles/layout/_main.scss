@@ -1,18 +1,17 @@
 @use "../abstracts" as *;
 
-.main-container {
-  flex: 1;
-  padding: 12px 24px 66px;
+.main-contents-inner {
+  background-color: #fff;
 }
 .main-contents {
-  margin-bottom: 24px;
+  padding: 0 24px 24px;
   &:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 .day-flow-wrap {
-  padding: 0 10px;
+  padding: 12px 10px 0;
   margin-bottom: 20px;
   .day-flow-btn {
     flex: none;
@@ -98,7 +97,7 @@
 }
 
 .go-to-wrap {
-  margin-bottom: 36px;
+  padding-bottom: 36px;
 }
 .go-to-header-wrap {
   margin-bottom: 12px;
