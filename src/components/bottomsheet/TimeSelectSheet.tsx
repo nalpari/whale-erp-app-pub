@@ -33,7 +33,7 @@ export default function TimeSelectSheet() {
             <div className="bottom-sheet-header">
               <h3>시간설정</h3>
               <div className="bt-sh-btn-wrap">
-                <button className="btn-s black">저장</button>
+                <button className="btn-s outline-g">저장</button>
               </div>
             </div>
             <div className=" bottom-sheet-body">

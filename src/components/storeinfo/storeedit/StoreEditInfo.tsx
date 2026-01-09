@@ -1,18 +1,24 @@
 "use client";
-import { useState } from "react";
-import StoreForm01 from "./storeform/StoreForm01";
-import StoreForm02 from "./storeform/StoreForm02";
-import StoreForm03 from "./storeform/StoreForm03";
-import StoreForm04 from "./storeform/StoreForm04";
+import { useEffect, useState } from "react";
+import StoreForm01 from "../storeform/StoreForm01";
+import StoreForm02 from "../storeform/StoreForm02";
 
-export default function StoreCreate() {
+export default function StoreEditInfo() {
   const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   const handleNext = () => {
     window.scrollTo({
       top: 0,
     });
     setStep(step + 1);
   };
+
   const handlePrev = () => {
     window.scrollTo({
       top: 0,
@@ -25,12 +31,10 @@ export default function StoreCreate() {
         <div className="sub-content-body">
           {step === 1 && <StoreForm01 />}
           {step === 2 && <StoreForm02 />}
-          {step === 3 && <StoreForm03 />}
-          {step === 4 && <StoreForm04 />}
         </div>
       </div>
       <div className="content-pagination">
-        {step === 4 && (
+        {step === 2 && (
           <div className="mb25">
             <button className="btn-form block blue">저장</button>
           </div>
@@ -47,11 +51,11 @@ export default function StoreCreate() {
           <div className="page-num">
             <span className="current">{step}</span>
             <span>/</span>
-            <span>4</span>
+            <span>2</span>
           </div>
           <button
             className="page-btn next"
-            disabled={step === 4}
+            disabled={step === 2}
             onClick={handleNext}
           >
             <span>다음</span>

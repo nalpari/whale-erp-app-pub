@@ -3,14 +3,16 @@ import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import Image from "next/image";
 
 export default function MainContents() {
-  const setGoToOptionSheet = useBottomSheetControler((state) => state.setGoToOptionSheet);
+  const setGoToOptionSheet = useBottomSheetControler(
+    (state) => state.setGoToOptionSheet
+  );
 
   const handleGoToOptionClick = () => {
     setGoToOptionSheet(true);
   };
 
   return (
-    <div className="container">
+    <div className="container main">
       <div className="main-contents-inner">
         <div className="main-contents">
           <div className="day-flow-wrap flex g16">
@@ -27,7 +29,7 @@ export default function MainContents() {
             <div className="sales-value-wrap">
               <div className="sales-value">835,860원</div>
               <div className="sales-revenue">
-                어제보다  <span>5,000원</span> 늘었어요
+                어제보다 <span>5,000원</span> 늘었어요
               </div>
             </div>
             <div className="total-sales-data">

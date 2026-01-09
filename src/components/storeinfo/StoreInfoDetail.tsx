@@ -1,6 +1,20 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 export default function StoreInfoDetail() {
+  const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
+  const handleEditLink = (link: string) => {
+    router.push(link);
+  };
   return (
     <div className="container sub">
       <div className="sub-tit-wrap">
@@ -15,7 +29,10 @@ export default function StoreInfoDetail() {
             <div className="sub-cont-tit-wrap">
               <div className="sub-cont-tit">점포 정보</div>
               <div className="sub-cont-btn-wrap">
-                <button className="sub-edit-btn"></button>
+                <button
+                  className="sub-edit-btn"
+                  onClick={() => handleEditLink("/storeinfo/1/edit/store")}
+                ></button>
               </div>
             </div>
             <div className="sub-item-bx">
@@ -82,7 +99,10 @@ export default function StoreInfoDetail() {
             <div className="sub-cont-tit-wrap">
               <div className="sub-cont-tit">점포 사진</div>
               <div className="sub-cont-btn-wrap">
-                <button className="sub-edit-btn"></button>
+                <button
+                  className="sub-edit-btn"
+                  onClick={() => handleEditLink("/storeinfo/1/edit/photo")}
+                ></button>
               </div>
             </div>
             <div className="sub-item-bx">
@@ -119,7 +139,10 @@ export default function StoreInfoDetail() {
             <div className="sub-cont-tit-wrap">
               <div className="sub-cont-tit">영업시간</div>
               <div className="sub-cont-btn-wrap">
-                <button className="sub-edit-btn"></button>
+                <button
+                  className="sub-edit-btn"
+                  onClick={() => handleEditLink("/storeinfo/1/edit/time")}
+                ></button>
               </div>
             </div>
             <div className="sub-item-bx">
