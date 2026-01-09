@@ -175,11 +175,15 @@
 .imp {
   color: #f00 !important;
 }
+.ellipsis {
+  @include ellipsis(1);
+}
 
 // badge
 .badge {
   display: inline-flex;
   align-items: center;
+  gap: 3px;
   padding: 2px 8px;
   border-radius: 100px;
   @include fontDefinition($font-ds-14, $font-w-500, $line-h-140);
@@ -191,6 +195,18 @@
   &.blue {
     background-color: #e8f3ff;
     color: #4393f0;
+  }
+  &.green {
+    background-color: #d3ede4;
+    color: #47a686;
+  }
+  .red_icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("/assets/images/contents/badge_red_icon.svg") no-repeat
+      center center;
+    background-size: cover;
   }
 }
 

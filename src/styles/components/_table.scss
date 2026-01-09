@@ -12,6 +12,7 @@
   }
   td {
     padding: 5px 0;
+    padding-left: 24px;
     @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
     color: #111111;
     .sub-txt {

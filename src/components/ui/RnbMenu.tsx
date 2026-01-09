@@ -68,7 +68,7 @@ export default function RnbMenu() {
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">직원관리</dt>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link href="/staff" className="rnb-menu-link">
               직원정보 관리
             </Link>
           </dd>

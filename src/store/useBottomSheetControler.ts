@@ -12,6 +12,8 @@ type BottomSheetControlerState = {
   setPhotoSelectSheet: (isOpen: boolean) => void;
   timeSelectSheet: boolean;
   setTimeSelectSheet: (isOpen: boolean) => void;
+  staffSearchSheet: boolean;
+  setStaffSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -32,6 +34,9 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
       timeSelectSheet: false,
       setTimeSelectSheet: (isOpen: boolean) =>
         set({ timeSelectSheet: isOpen }, false, "bottomSheet/setTimeSelect"),
+      staffSearchSheet: false,
+      setStaffSearchSheet: (isOpen: boolean) =>
+        set({ staffSearchSheet: isOpen }, false, "bottomSheet/setStaffSearch"),
     }),
     { name: "BottomSheetControlerStore" }
   )

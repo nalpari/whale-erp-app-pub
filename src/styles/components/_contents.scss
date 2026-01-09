@@ -33,16 +33,27 @@
 }
 .sub-item-bx {
   display: block;
+  width: 100%;
   text-align: left;
-  padding: 24px 20px 28px;
+  padding: 24px 20px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
     0 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.04);
   margin-bottom: 12px;
+  &.s {
+    margin-bottom: 6px;
+  }
   &:last-child {
     margin-bottom: 0;
+    &.s {
+      margin-bottom: 0;
+    }
   }
+}
+.auto-right {
+  margin-left: auto;
+  flex: none;
 }
 .sub-cont-tit-wrap {
   @include flex(0px);
@@ -52,10 +63,10 @@
     @include fontDefinition($font-ds-20, $font-w-700, $line-h-140);
     color: #111111;
   }
-  .sub-cont-btn-wrap {
-    margin-left: auto;
-    flex: none;
-  }
+}
+.sub-cont-btn-wrap {
+  margin-left: auto;
+  flex: none;
 }
 .sub-edit-btn {
   display: block;
@@ -95,6 +106,9 @@
   border-radius: 6px;
   background-color: #fff;
   margin-bottom: 18px;
+  &.staff {
+    margin-bottom: 28px;
+  }
   .search-count {
     flex: 1;
     padding: 9px 20px;
@@ -262,6 +276,98 @@
     color: #505050;
     .img-tit {
       @include ellipsis(1);
+    }
+  }
+}
+
+/************************ 직원 관리 ************************/
+.staff-list-item {
+  margin-bottom: 28px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.staff-item-header {
+  @include flex(0px);
+  align-items: center;
+  margin-bottom: 16px;
+  .staff-invite-btn {
+    position: relative;
+    padding-left: 28px;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #0168ff;
+    &.check {
+      color: #f37362;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("/assets/images/contents/invite_check.svg") no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+  }
+}
+.head-staff-info {
+  @include flex(8px);
+  align-items: center;
+  .staff-icon {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .staff-info-data {
+    .staff-name {
+      @include flex(8px);
+      align-items: center;
+      span {
+        @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+        color: #111111;
+      }
+      .memo {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("/assets/images/contents/include_memo.svg") no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+    .staff-job {
+      margin-top: 5px;
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: #111;
+    }
+  }
+}
+.contract-link {
+  display: block;
+  text-align: left;
+  width: 100%;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 16px;
+  .contract-inner {
+    @include flex(8px);
+    align-items: center;
+    .contract-tit {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: #111111;
+    }
+    .contract-arr {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url("/assets/images/contents/contract_arr.svg") no-repeat
+        center center;
+      background-size: cover;
     }
   }
 }

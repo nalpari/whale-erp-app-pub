@@ -7,6 +7,8 @@ import GoToOptionSheet from "../bottomsheet/GoToOptionSheet";
 import StoreSearchSheet from "../bottomsheet/StoreSearchSheet";
 import PhotoSelectSheet from "../bottomsheet/PhotoSelectSheet";
 import TimeSelectSheet from "../bottomsheet/TimeSelectSheet";
+import StaffSearchSheet from "../bottomsheet/StaffSearchSheet";
+
 export default function BottomSheetControler() {
   const storeSelectSheet = useBottomSheetControler(
     (state) => state.storeSelectSheet
@@ -23,6 +25,9 @@ export default function BottomSheetControler() {
   const timeSelectSheet = useBottomSheetControler(
     (state) => state.timeSelectSheet
   );
+  const staffSearchSheet = useBottomSheetControler(
+    (state) => state.staffSearchSheet
+  );
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
     const isAnyBottomSheetOpen =
@@ -30,7 +35,8 @@ export default function BottomSheetControler() {
       goToOptionSheet ||
       storeSearchSheet ||
       photoSelectSheet ||
-      timeSelectSheet;
+      timeSelectSheet ||
+      staffSearchSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -49,6 +55,7 @@ export default function BottomSheetControler() {
     storeSearchSheet,
     photoSelectSheet,
     timeSelectSheet,
+    staffSearchSheet,
   ]);
 
   return (
@@ -58,6 +65,7 @@ export default function BottomSheetControler() {
       {storeSearchSheet && <StoreSearchSheet />}
       {photoSelectSheet && <PhotoSelectSheet />}
       {timeSelectSheet && <TimeSelectSheet />}
+      {staffSearchSheet && <StaffSearchSheet />}
     </>
   );
 }
