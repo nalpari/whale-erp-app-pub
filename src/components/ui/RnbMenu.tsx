@@ -4,12 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useMenuStore } from "@/store/useMenuStore";
-import { useRouter } from "next/navigation";
 
 export default function RnbMenu() {
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   const closeMenu = useMenuStore((state) => state.closeMenu);
-  const router = useRouter();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -23,9 +21,8 @@ export default function RnbMenu() {
     };
   }, [isMenuOpen]);
 
-  const handleStoreInfoClick = (link: string) => {
+  const handleStoreInfoClick = () => {
     closeMenu();
-    router.push(link);
   };
 
   return (
@@ -59,7 +56,7 @@ export default function RnbMenu() {
             <Link
               href="/storeinfo"
               className="rnb-menu-link"
-              onClick={() => handleStoreInfoClick("/storeinfo")}
+              onClick={handleStoreInfoClick}
             >
               점포정보 관리
             </Link>
@@ -68,7 +65,11 @@ export default function RnbMenu() {
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">직원관리</dt>
           <dd className="rnb-menu-item">
-            <Link href="/staff" className="rnb-menu-link">
+            <Link
+              href="/staff"
+              className="rnb-menu-link"
+              onClick={handleStoreInfoClick}
+            >
               직원정보 관리
             </Link>
           </dd>

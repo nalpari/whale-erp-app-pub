@@ -1,5 +1,33 @@
 @use "../abstracts" as *;
-
+.tooltip-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  .tooltip-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/assets/images/contents/tooltip_icon.svg") no-repeat center;
+    background-size: cover;
+    transition: all 0.15s ease-in-out;
+  }
+  .tooltip-txt {
+    @include flex(3px);
+    flex-direction: column;
+    background-color: #999;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    max-width: 150px;
+    @include fontDefinition($font-ds-14, $font-w-400, $line-h-140);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    word-break: break-all;
+    h4 {
+      font-weight: 600;
+    }
+  }
+}
 // sub common
 .sub-tit-wrap {
   @include flex(0px);
@@ -35,7 +63,7 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: 24px 20px;
+  padding: 24px 20px 28px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
@@ -81,13 +109,21 @@
   &:last-child {
     margin-bottom: 0;
   }
+  .tit-head {
+    @include flex(8px);
+    align-items: center;
+    margin-bottom: 10px;
+    .filed-tit {
+      margin-bottom: 0;
+    }
+  }
   .filed-tit {
     @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
     color: #111111;
     margin-bottom: 10px;
     &.sub {
-      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
-      color: #767676;
+      @include fontDefinition($font-ds-16, $font-w-500, $line-h-140);
+      color: #505050;
     }
   }
 }
@@ -98,6 +134,7 @@
 .s-txt {
   @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
   color: #505050;
+  letter-spacing: -0.375px;
 }
 
 // 점포정보 관리
@@ -279,6 +316,21 @@
     }
   }
 }
+.day-btn {
+  display: block;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+  color: #111;
+  transition: all 0.15s ease-in-out;
+  &.act {
+    background-color: #f4f5f6;
+  }
+}
 
 /************************ 직원 관리 ************************/
 .staff-list-item {
@@ -361,13 +413,36 @@
       @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
       color: #111111;
     }
-    .contract-arr {
-      display: block;
-      width: 32px;
-      height: 32px;
-      background: url("/assets/images/contents/contract_arr.svg") no-repeat
-        center center;
-      background-size: cover;
-    }
+  }
+}
+.contract-arr {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/contents/contract_arr.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+
+// 직원 초대
+.radio-btn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.pay-table-header {
+  @include flex(0px);
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #111;
+  .pay-table-tit {
+    @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+    color: #111111;
+  }
+  .total-pay {
+    @include fontDefinition($font-ds-18, $font-w-700, $line-h-140);
+    color: #f37362;
   }
 }

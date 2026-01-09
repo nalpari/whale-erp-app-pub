@@ -21,3 +21,20 @@
     }
   }
 }
+
+.pay-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  td {
+    padding: 4px 6px;
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #111;
+    &.bold {
+      font-weight: $font-w-600;
+    }
+    &.tit {
+      color: #767676;
+    }
+  }
+}

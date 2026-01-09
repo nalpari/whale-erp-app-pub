@@ -1,7 +1,7 @@
 "use client";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
-export default function StoreForm04() {
+export default function InviteForm04() {
   const setTimeSelectSheet = useBottomSheetControler(
     (state) => state.setTimeSelectSheet
   );
@@ -10,7 +10,9 @@ export default function StoreForm04() {
     <div className="sub-cont-wrap">
       <div className="sub-cont-item-wrap">
         <div className="sub-cont-tit-wrap">
-          <div className="sub-cont-tit">영업시간</div>
+          <div className="sub-cont-tit">
+            계약 근무시간 <span className="imp">*</span>
+          </div>
         </div>
         <div className="sub-item-bx">
           <div className="data-filed">
@@ -35,7 +37,7 @@ export default function StoreForm04() {
             </div>
           </div>
           <div className="data-filed">
-            <div className="filed-tit sub">브레이크타임</div>
+            <div className="filed-tit sub">휴게시간</div>
             <div>
               <div className="block mb8">
                 <button
@@ -56,7 +58,7 @@ export default function StoreForm04() {
             </div>
           </div>
           <div className="data-filed">
-            <div className="filed-tit sub">요일선택</div>
+            <div className="filed-tit sub">근무요일</div>
             <div className="flex g8">
               <button className="day-btn act">월</button>
               <button className="day-btn">화</button>
@@ -89,7 +91,7 @@ export default function StoreForm04() {
             </div>
           </div>
           <div className="data-filed">
-            <div className="filed-tit sub">브레이크타임</div>
+            <div className="filed-tit sub">휴게시간</div>
             <div>
               <div className="block mb8">
                 <button
@@ -106,6 +108,25 @@ export default function StoreForm04() {
                 >
                   종료시간
                 </button>
+              </div>
+            </div>
+          </div>
+          <div className="data-filed">
+            <div className="filed-tit sub">격주근무 여부</div>
+            <div className="flex g8">
+              <button className="radio-btn block blue act">매주 근무</button>
+              <button className="radio-btn block blue">격주 근무 </button>
+            </div>
+          </div>
+          <div className="data-filed">
+            <div className="filed-tit sub">격주근무 시작일</div>
+            <div className="block">
+              <div className="date-picker-custom">
+                <input
+                  type="text"
+                  className="date-picker-input"
+                  defaultValue="2025.10.28"
+                />
               </div>
             </div>
           </div>
@@ -150,6 +171,25 @@ export default function StoreForm04() {
                 >
                   종료시간
                 </button>
+              </div>
+            </div>
+          </div>
+          <div className="data-filed">
+            <div className="filed-tit sub">격주근무 여부</div>
+            <div className="flex g8">
+              <button className="radio-btn block blue act">매주 근무</button>
+              <button className="radio-btn block blue">격주 근무 </button>
+            </div>
+          </div>
+          <div className="data-filed">
+            <div className="filed-tit sub">격주근무 시작일</div>
+            <div className="block">
+              <div className="date-picker-custom">
+                <input
+                  type="text"
+                  className="date-picker-input"
+                  defaultValue="2025.10.28"
+                />
               </div>
             </div>
           </div>

@@ -1,8 +1,10 @@
 "use client";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function StaffInfoList() {
+  const router = useRouter();
   const setStaffSearchSheet = useBottomSheetControler(
     (state) => state.setStaffSearchSheet
   );
@@ -16,7 +18,10 @@ export default function StaffInfoList() {
       <div className="sub-tit-wrap ">
         <div className="sub-tit">직원 관리</div>
         <div className="sub-btn-wrap">
-          <button className="btn-s black">
+          <button
+            className="btn-s black"
+            onClick={() => router.push("/staff/invite")}
+          >
             <i className="invite"></i>
             직원 초대
           </button>

@@ -109,7 +109,7 @@
 
 // radio button
 .radio-btn {
-  @include btn-frame(40px, 24px, $font-ds-15, 24px);
+  @include btn-frame(40px, 10px, $font-ds-15, 24px);
   background-color: #fff;
   border: 1px solid #abb7c2;
   color: #77828d;
@@ -119,6 +119,15 @@
     background-color: #77828d;
     color: #fff;
     border-color: #77828d;
+  }
+  &.blue {
+    border-color: #99c3ff;
+    color: #80b3ff;
+    &.act {
+      background-color: #e5efff;
+      color: #0168ff;
+      border-color: #0168ff;
+    }
   }
 }
 

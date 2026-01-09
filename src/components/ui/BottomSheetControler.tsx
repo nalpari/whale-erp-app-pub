@@ -40,12 +40,17 @@ export default function BottomSheetControler() {
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
-      document.body.classList.add("open");
+      if (!document.body.classList.contains("open")) {
+        // 👈 중복 방지
+        document.body.classList.add("open");
+      }
     } else {
-      document.body.classList.remove("open");
+      if (document.body.classList.contains("open")) {
+        // 👈 중복 방지
+        document.body.classList.remove("open");
+      }
     }
 
-    // 컴포넌트 언마운트 시 클래스 제거
     return () => {
       document.body.classList.remove("open");
     };
