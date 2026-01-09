@@ -6,15 +6,22 @@ type PopupControlerState = {
   setAiChatPopup: (isOpen: boolean) => void;
   alertPopup: boolean;
   setAlertPopup: (isOpen: boolean) => void;
+  photoPopup: boolean;
+  setPhotoPopup: (isOpen: boolean) => void;
 };
 
 export const usePopupControler = create<PopupControlerState>()(
   devtools(
     (set) => ({
       aiChatPopup: false,
-      setAiChatPopup: (isOpen: boolean) => set({ aiChatPopup: isOpen }, false, "popup/setAiChat"),
+      setAiChatPopup: (isOpen: boolean) =>
+        set({ aiChatPopup: isOpen }, false, "popup/setAiChat"),
       alertPopup: false,
-      setAlertPopup: (isOpen: boolean) => set({ alertPopup: isOpen }, false, "popup/setAlert"),
+      setAlertPopup: (isOpen: boolean) =>
+        set({ alertPopup: isOpen }, false, "popup/setAlert"),
+      photoPopup: false,
+      setPhotoPopup: (isOpen: boolean) =>
+        set({ photoPopup: isOpen }, false, "popup/setPhoto"),
     }),
     { name: "PopupControlerStore" }
   )

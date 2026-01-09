@@ -189,3 +189,35 @@
     margin-top: 5px;
   }
 }
+
+// Photo
+.photo-frame {
+  @include flex(0px);
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  margin: 0 auto;
+  height: 100%;
+  .mySwiper {
+    height: 100%;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+  .photo-img {
+    position: relative;
+    @include flex(0px);
+    align-items: center;
+    height: 100%;
+  }
+  .swiper-pagination {
+    bottom: 24px;
+    color: #fff;
+    @include fontDefinition($font-ds-16, $font-w-400, $line-h-140);
+    letter-spacing: -0.375px;
+    .swiper-pagination-current {
+      color: #f37362;
+      font-weight: $font-w-700;
+    }
+  }
+}

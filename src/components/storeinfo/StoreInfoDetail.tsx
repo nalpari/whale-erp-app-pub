@@ -1,10 +1,12 @@
 "use client";
 
+import { usePopupControler } from "@/store/usePopupControler";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function StoreInfoDetail() {
   const router = useRouter();
+  const setPhotoPopup = usePopupControler((state) => state.setPhotoPopup);
 
   useEffect(() => {
     window.scrollTo({
@@ -106,7 +108,7 @@ export default function StoreInfoDetail() {
               </div>
             </div>
             <div className="sub-item-bx">
-              <div className="store-img-list">
+              <div className="store-img-list m0">
                 <div className="store-img-item">
                   <div className="store-img-tit">
                     <span className="img-tit">점포 사진 1점포 사진 사진</span>
@@ -114,7 +116,10 @@ export default function StoreInfoDetail() {
                   </div>
                   <div className="store-img-btn-wrap">
                     <button className="img-delete"></button>
-                    <button className="img-show"></button>
+                    <button
+                      className="img-show"
+                      onClick={() => setPhotoPopup(true)}
+                    ></button>
                   </div>
                 </div>
                 <div className="store-img-item">
@@ -127,7 +132,10 @@ export default function StoreInfoDetail() {
                   </div>
                   <div className="store-img-btn-wrap">
                     <button className="img-delete"></button>
-                    <button className="img-show"></button>
+                    <button
+                      className="img-show"
+                      onClick={() => setPhotoPopup(true)}
+                    ></button>
                   </div>
                 </div>
               </div>
