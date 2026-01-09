@@ -72,10 +72,63 @@ export default function PublishPage() {
                     <td className="c red">2025-12-24</td>
                   </tr>
                   <tr>
-                    <td>점포 정보보</td>
-                    <td></td>
+                    <td rowSpan={6}>점포 정보</td>
+                    <td>점포 정보 리스트</td>
                     <td>
                       <Link href={"/storeinfo"}>StoreInfoList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>점포 정보 상세</td>
+                    <td>
+                      <Link href={"/storeinfo/1"}>StoreInfoDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>점포 정보 등록</td>
+                    <td>
+                      <Link href={"/storeinfo/create"}>
+                        StoreInfoCreate.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>점포 정보 수정</td>
+                    <td>
+                      <Link href={"/storeinfo/1/edit/store"}>
+                        StoreEditInfo.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>점포 사진 수정</td>
+                    <td>
+                      <Link href={"/storeinfo/1/edit/photo"}>
+                        StoreEditPhoto.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>점포 영업시간 수정</td>
+                    <td>
+                      <Link href={"/storeinfo/1/edit/time"}>
+                        StoreEditTime.tsx
+                      </Link>
                     </td>
                     <td></td>
                     <td></td>

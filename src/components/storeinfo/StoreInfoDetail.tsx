@@ -139,6 +139,10 @@ export default function StoreInfoDetail() {
                   </div>
                 </div>
               </div>
+              {/* 등록된 이미지가 없을 때 */}
+              <div className="store-img-empty">
+                <div className="s-txt">등록된 이미지가 없습니다.</div>
+              </div>
             </div>
           </div>
         </div>

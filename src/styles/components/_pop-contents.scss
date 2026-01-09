@@ -1,4 +1,10 @@
 @use "../abstracts" as *;
+.back-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f4f5f6;
+}
 // Alert
 .alert-info {
   text-align: center;
@@ -218,6 +224,89 @@
     .swiper-pagination-current {
       color: #f37362;
       font-weight: $font-w-700;
+    }
+  }
+}
+
+// 주소검색
+.address-search {
+  padding: 24px;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.address-list-wrap {
+  flex: 1;
+  padding: 24px 24px 0;
+  border-top: 1px solid #ebebeb;
+  background-color: #fff;
+  .address-count {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    span {
+      font-weight: $font-w-600;
+    }
+  }
+}
+.address-list {
+  height: calc(100vh - 239px);
+  overflow-y: auto;
+  margin-right: -24px;
+  padding-right: 24px;
+  .address-item {
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+.address-item-btn {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  text-align: left;
+  .address-tit {
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-160);
+    color: #111;
+  }
+  .address-addr {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+    color: #505050;
+  }
+}
+
+.address-list-empty-tit {
+  @include flex(6px);
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+  .tip-badge {
+    @include fontDefinition($font-ds-14, $font-w-600, 28px);
+    color: #fff;
+    height: 28px;
+    background-color: #666;
+    padding: 0 8px;
+    border-radius: 100px;
+  }
+  span {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #111;
+  }
+}
+.address-example-list {
+  @include flex(20px);
+  flex-direction: column;
+  padding: 24px 0;
+  .address-example-item {
+    .address-example-item-tit {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+      color: #1a1a1a;
+    }
+    .address-example-item-addr {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+      color: #007aff;
     }
   }
 }

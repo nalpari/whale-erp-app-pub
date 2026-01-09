@@ -8,6 +8,8 @@ type PopupControlerState = {
   setAlertPopup: (isOpen: boolean) => void;
   photoPopup: boolean;
   setPhotoPopup: (isOpen: boolean) => void;
+  addressSearchPopup: boolean;
+  setAddressSearchPopup: (isOpen: boolean) => void;
 };
 
 export const usePopupControler = create<PopupControlerState>()(
@@ -22,6 +24,9 @@ export const usePopupControler = create<PopupControlerState>()(
       photoPopup: false,
       setPhotoPopup: (isOpen: boolean) =>
         set({ photoPopup: isOpen }, false, "popup/setPhoto"),
+      addressSearchPopup: false,
+      setAddressSearchPopup: (isOpen: boolean) =>
+        set({ addressSearchPopup: isOpen }, false, "popup/setAddressSearch"),
     }),
     { name: "PopupControlerStore" }
   )

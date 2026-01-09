@@ -1,4 +1,10 @@
+"use client";
+import { usePopupControler } from "@/store/usePopupControler";
+
 export default function StoreForm02() {
+  const setAddressSearchPopup = usePopupControler(
+    (state) => state.setAddressSearchPopup
+  );
   return (
     <div className="sub-cont-wrap">
       <div className="sub-cont-item-wrap">
@@ -32,7 +38,12 @@ export default function StoreForm02() {
             </div>
             <div className="block">
               <div className="block mb8">
-                <button className="btn-form block grey">주소찾기</button>
+                <button
+                  className="btn-form block grey"
+                  onClick={() => setAddressSearchPopup(true)}
+                >
+                  주소찾기
+                </button>
               </div>
               <div className="block mb8">
                 <input type="text" className="input-frame" readOnly />
