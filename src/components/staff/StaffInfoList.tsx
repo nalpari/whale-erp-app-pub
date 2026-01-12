@@ -99,7 +99,10 @@ export default function StaffInfoList() {
                 </tbody>
               </table>
             </div>
-            <button className="contract-link">
+            <button
+              className="contract-link"
+              onClick={() => router.push("/staff/1")}
+            >
               <div className="contract-inner">
                 <div className="contract-tit">근로계약서</div>
                 <div className="badge red">

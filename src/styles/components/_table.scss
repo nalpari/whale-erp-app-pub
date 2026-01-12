@@ -1,5 +1,11 @@
 @use "../abstracts" as *;
 
+.down-btn {
+  display: block;
+  text-align: left;
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+  color: #2379e4;
+}
 .info-table {
   width: 100%;
   border-collapse: collapse;
@@ -13,6 +19,7 @@
   td {
     padding: 5px 0;
     padding-left: 24px;
+    vertical-align: top;
     @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
     color: #111111;
     .sub-txt {
@@ -20,8 +27,51 @@
       color: #505050;
     }
   }
+  tr {
+    &:first-child {
+      th,
+      td {
+        padding-top: 0;
+      }
+    }
+    &:last-child {
+      th,
+      td {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
-
+.data-list {
+  @include flex(0px);
+  align-items: center;
+  flex-wrap: wrap;
+  span {
+    position: relative;
+    display: block;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111111;
+    padding: 0 6px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 1px;
+      height: 9px;
+      background-color: #999a9a;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
 .pay-table {
   width: 100%;
   table-layout: fixed;

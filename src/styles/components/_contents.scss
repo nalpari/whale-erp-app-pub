@@ -40,6 +40,10 @@
     span {
       display: block;
     }
+    .sub-s-txt {
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #222;
+    }
     .sub-tit-code {
       @include fontDefinition($font-ds-14, $font-w-400, $line-h-140);
       color: #767676;
@@ -101,6 +105,14 @@
   width: 32px;
   height: 32px;
   background: url("/assets/images/contents/sub_edit.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.sub-down-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/contents/sub_down_btn.svg") no-repeat center
     center;
   background-size: cover;
 }
@@ -507,7 +519,7 @@
     }
   }
 }
-.employment-btn-wrap {
+.employment-btn {
   width: 24px;
   height: 24px;
   background: url("/assets/images/contents/employment_btn.svg") no-repeat center
@@ -540,6 +552,171 @@
       }
       .total-pay-val {
         color: #b7584b;
+      }
+    }
+  }
+}
+
+// 직원 상세 페이지
+.memo-wrap {
+  @include flex(14px);
+  .memo-icon {
+    flex: none;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("/assets/images/contents/memo_icon_black.svg") no-repeat
+      center center;
+    background-size: cover;
+  }
+  .memo-txt {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111111;
+  }
+}
+
+.staff-detail-info-bx {
+  @include flex(18px);
+  align-items: center;
+  .staff-icon {
+    flex: none;
+    position: relative;
+    width: 54px;
+    height: 54px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    .staff-icon-img {
+      display: block;
+      position: absolute;
+      top: -19px;
+      left: -6px;
+      width: 67px;
+      height: 39px;
+      background: url("/assets/images/contents/staff_request_tip.png") no-repeat
+        center center;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
+}
+.staff-detail-info {
+  .staff-name {
+    @include flex(8px);
+    align-items: center;
+    margin-bottom: 8px;
+    span {
+      display: block;
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #111111;
+    }
+    .staff-job {
+      @include flex(0px);
+      align-items: center;
+      span {
+        position: relative;
+        display: block;
+        @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+        color: #111111;
+        padding: 0 4px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          right: 0;
+          width: 1px;
+          height: 9px;
+          background-color: #999a9a;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .staff-data {
+    @include flex(5px);
+    align-items: center;
+    .badge {
+      display: block;
+      height: 24px;
+      @include fontDefinition($font-ds-14, $font-w-500, 24px);
+      color: #505050;
+      background-color: #e5e5e5;
+      padding: 0px 8px;
+      border-radius: 100px;
+      &.r {
+        border: 1px solid #fd5b3e;
+        background-color: #fff;
+        color: #fd5b3e;
+      }
+    }
+  }
+}
+
+.staff-invite-btn-wrap {
+  @include flex(8px);
+  align-items: center;
+  margin-top: 20px;
+
+  .staff-invite-btn {
+    @include flex(3px);
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    background-color: #444;
+    border-radius: 100px;
+    width: 100%;
+    height: 44px;
+    @include fontDefinition($font-ds-14, $font-w-600, $line-h-140);
+    color: #fff;
+  }
+  .staff-edit-btn {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    background: url("/assets/images/contents/edit_icon_l.svg") no-repeat center
+      center;
+    background-size: cover;
+  }
+}
+
+.qualifications-wrap {
+  @include flex(10px);
+  flex-direction: column;
+  .qualifications-item {
+    position: relative;
+    @include flex(8px);
+    align-items: center;
+    .qualifications-item-tit {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: #111111;
+    }
+    .qualifications-item-date {
+      margin-left: auto;
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: #505050;
+    }
+  }
+}
+.career-wrap {
+  @include flex(18px);
+  flex-direction: column;
+  .career-item {
+    .career-item-tit {
+      @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+      color: #111111;
+      margin-bottom: 5px;
+    }
+    .career-item-desc {
+      span {
+        @include fontDefinition($font-ds-15, $font-w-400, $line-h-150);
+        color: #505050;
       }
     }
   }
