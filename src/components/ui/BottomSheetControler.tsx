@@ -8,6 +8,9 @@ import StoreSearchSheet from "../bottomsheet/StoreSearchSheet";
 import PhotoSelectSheet from "../bottomsheet/PhotoSelectSheet";
 import TimeSelectSheet from "../bottomsheet/TimeSelectSheet";
 import StaffSearchSheet from "../bottomsheet/StaffSearchSheet";
+import ContractOptionSheet from "../bottomsheet/ContractOptionSheet";
+import PartStaffPaySheet from "../bottomsheet/PartStaffPaySheet";
+import BonusPaySheet from "../bottomsheet/BonusPaySheet";
 
 export default function BottomSheetControler() {
   const storeSelectSheet = useBottomSheetControler(
@@ -28,6 +31,13 @@ export default function BottomSheetControler() {
   const staffSearchSheet = useBottomSheetControler(
     (state) => state.staffSearchSheet
   );
+  const contractOptionSheet = useBottomSheetControler(
+    (state) => state.contractOptionSheet
+  );
+  const partStaffPaySheet = useBottomSheetControler(
+    (state) => state.partStaffPaySheet
+  );
+  const bonusPaySheet = useBottomSheetControler((state) => state.bonusPaySheet);
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
     const isAnyBottomSheetOpen =
@@ -36,7 +46,10 @@ export default function BottomSheetControler() {
       storeSearchSheet ||
       photoSelectSheet ||
       timeSelectSheet ||
-      staffSearchSheet;
+      staffSearchSheet ||
+      contractOptionSheet ||
+      partStaffPaySheet ||
+      bonusPaySheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -61,6 +74,9 @@ export default function BottomSheetControler() {
     photoSelectSheet,
     timeSelectSheet,
     staffSearchSheet,
+    contractOptionSheet,
+    partStaffPaySheet,
+    bonusPaySheet,
   ]);
 
   return (
@@ -71,6 +87,9 @@ export default function BottomSheetControler() {
       {photoSelectSheet && <PhotoSelectSheet />}
       {timeSelectSheet && <TimeSelectSheet />}
       {staffSearchSheet && <StaffSearchSheet />}
+      {contractOptionSheet && <ContractOptionSheet />}
+      {partStaffPaySheet && <PartStaffPaySheet />}
+      {bonusPaySheet && <BonusPaySheet />}
     </>
   );
 }

@@ -249,3 +249,12 @@
     }
   }
 }
+.toggle-wrap {
+  flex: none;
+  @include flex(8px);
+  align-items: center;
+  .toggle-txt {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111;
+  }
+}

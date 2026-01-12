@@ -4,6 +4,28 @@
   @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
   color: #111111;
 }
+.filed-guide {
+  position: relative;
+  margin-top: 12px;
+  padding-left: 15px;
+  span {
+    display: block;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #505050;
+    i {
+      color: #0168ff;
+      font-weight: $font-w-600;
+    }
+  }
+  &:before {
+    content: "※";
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #505050;
+  }
+}
 // 점포 선택
 .store-list {
   @include flex(10px);
@@ -73,6 +95,14 @@
   flex-direction: column;
 }
 .sheet-data-filed {
+  .tit-head {
+    @include flex(8px);
+    align-items: center;
+    margin-bottom: 10px;
+    .filed-tit {
+      margin-bottom: 0;
+    }
+  }
   .filed-tit {
     @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
     color: #111111;

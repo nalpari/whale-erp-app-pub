@@ -1,14 +1,21 @@
 "use client";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function EmploymentContract() {
+  const setContractOptionSheet = useBottomSheetControler(
+    (state) => state.setContractOptionSheet
+  );
   return (
     <div className="container sub">
       <div className="sub-content-body">
         <div className="sub-cont-wrap">
           <div className="sub-cont-item-wrap">
-            <button className="employment-header">
+            <button
+              className="employment-header"
+              onClick={() => setContractOptionSheet(true)}
+            >
               <div className="employment-icon">
                 <Image
                   src="/assets/images/layout/avatar01.svg"

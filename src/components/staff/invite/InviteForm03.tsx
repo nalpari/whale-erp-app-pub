@@ -1,8 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function InviteForm03() {
   const router = useRouter();
+  const setPartStaffPaySheet = useBottomSheetControler(
+    (state) => state.setPartStaffPaySheet
+  );
+  const setBonusPaySheet = useBottomSheetControler(
+    (state) => state.setBonusPaySheet
+  );
   return (
     <div className="sub-cont-wrap">
       <div className="sub-cont-item-wrap">
@@ -94,9 +101,43 @@ export default function InviteForm03() {
         </div>
         <div className="sub-item-bx">
           <div className="pay-table-header">
+            <div className="pay-table-tit">시급</div>
+            <div className="auto-right">
+              <button
+                className="contract-arr"
+                onClick={() => setPartStaffPaySheet(true)}
+              ></button>
+            </div>
+          </div>
+          <table className="pay-table">
+            <colgroup>
+              <col />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td className="tit">평일시급</td>
+                <td className="al-r">20,000원</td>
+              </tr>
+              <tr>
+                <td className="tit">연장근무시급</td>
+                <td className="al-r">0원</td>
+              </tr>
+              <tr>
+                <td className="tit">휴일근무시급</td>
+                <td className="al-r">0원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="sub-item-bx">
+          <div className="pay-table-header">
             <div className="pay-table-tit">상여금</div>
             <div className="auto-right">
-              <button className="contract-arr"></button>
+              <button
+                className="contract-arr"
+                onClick={() => setBonusPaySheet(true)}
+              ></button>
             </div>
           </div>
           <table className="pay-table">
