@@ -446,3 +446,101 @@
     color: #f37362;
   }
 }
+
+// 근로계약 등록 / 수정
+.employment-header {
+  @include flex(8px);
+  align-items: center;
+  margin-bottom: 24px;
+  .employment-icon {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    align-self: start;
+    margin-right: 4px;
+  }
+}
+.employment-info {
+  @include flex(4px);
+  flex-direction: column;
+  .employment-name {
+    @include flex(8px);
+    align-items: center;
+    .name {
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #111111;
+    }
+  }
+  .employment-job {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111111;
+  }
+  .employment-contract {
+    @include flex(0px);
+    align-items: center;
+    .employ-cont-item {
+      position: relative;
+      @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+      color: #111111;
+      padding: 0 6px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 9px;
+        background-color: #999a9a;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.employment-btn-wrap {
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/contents/employment_btn.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.total-pay-wrap {
+  @include flex(8px);
+  flex-direction: column;
+  padding-top: 18px;
+  .total-pay-bx {
+    @include flex(8px);
+    align-items: center;
+    padding: 13px 12px;
+    border-radius: 10px;
+    background-color: #f4f5f6;
+    .total-pay-tit {
+      @include fontDefinition($font-ds-15, $font-w-700, $line-h-140);
+      color: #111111;
+    }
+    .total-pay-val {
+      margin-left: auto;
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #111111;
+    }
+    &.year {
+      background-color: #fef1ef;
+      .total-pay-tit {
+        color: #b7584b;
+      }
+      .total-pay-val {
+        color: #b7584b;
+      }
+    }
+  }
+}

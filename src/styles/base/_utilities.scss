@@ -159,6 +159,9 @@
 .g6 {
   gap: 6px;
 }
+.g4 {
+  gap: 4px;
+}
 
 // radius
 .radius-4 {
@@ -202,6 +205,11 @@
   &.green {
     background-color: #d3ede4;
     color: #47a686;
+  }
+  &.org {
+    background-color: #f3a680;
+    color: #fff;
+    font-weight: $font-w-600;
   }
   .red_icon {
     display: block;

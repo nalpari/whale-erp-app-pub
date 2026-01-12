@@ -1,11 +1,18 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 export default function InviteForm03() {
+  const router = useRouter();
   return (
     <div className="sub-cont-wrap">
       <div className="sub-cont-item-wrap">
         <div className="sub-cont-tit-wrap">
           <div className="sub-cont-tit">급여정보</div>
           <div className="sub-cont-btn-wrap">
-            <button className="sub-edit-btn"></button>
+            <button
+              className="sub-edit-btn"
+              onClick={() => router.push("/staff/employment")}
+            ></button>
           </div>
         </div>
         <div className="sub-item-bx">

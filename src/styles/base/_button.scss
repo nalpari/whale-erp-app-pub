@@ -24,6 +24,9 @@
   &:active {
     background-color: $sky-a-back-color;
   }
+  &.brd {
+    border: 1px solid $sky-font-color;
+  }
 }
 .grey {
   background-color: $grey-back-color;
