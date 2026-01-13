@@ -11,6 +11,7 @@ import StaffSearchSheet from "../bottomsheet/StaffSearchSheet";
 import ContractOptionSheet from "../bottomsheet/ContractOptionSheet";
 import PartStaffPaySheet from "../bottomsheet/PartStaffPaySheet";
 import BonusPaySheet from "../bottomsheet/BonusPaySheet";
+import ContractSearchSheet from "../bottomsheet/ContractSearchSheet";
 
 export default function BottomSheetControler() {
   const storeSelectSheet = useBottomSheetControler(
@@ -38,6 +39,9 @@ export default function BottomSheetControler() {
     (state) => state.partStaffPaySheet
   );
   const bonusPaySheet = useBottomSheetControler((state) => state.bonusPaySheet);
+  const contractSearchSheet = useBottomSheetControler(
+    (state) => state.contractSearchSheet
+  );
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
     const isAnyBottomSheetOpen =
@@ -49,7 +53,8 @@ export default function BottomSheetControler() {
       staffSearchSheet ||
       contractOptionSheet ||
       partStaffPaySheet ||
-      bonusPaySheet;
+      bonusPaySheet ||
+      contractSearchSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -77,6 +82,7 @@ export default function BottomSheetControler() {
     contractOptionSheet,
     partStaffPaySheet,
     bonusPaySheet,
+    contractSearchSheet,
   ]);
 
   return (
@@ -90,6 +96,7 @@ export default function BottomSheetControler() {
       {contractOptionSheet && <ContractOptionSheet />}
       {partStaffPaySheet && <PartStaffPaySheet />}
       {bonusPaySheet && <BonusPaySheet />}
+      {contractSearchSheet && <ContractSearchSheet />}
     </>
   );
 }

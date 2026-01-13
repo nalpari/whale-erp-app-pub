@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function ContractList() {
+  const setContractSearchSheet = useBottomSheetControler(
+    (state) => state.setContractSearchSheet
+  );
   return (
     <div className="container">
       <div className="sub-tit-wrap ">
@@ -13,7 +17,10 @@ export default function ContractList() {
           <div className="search-count">
             검색결과 <span>128건</span>
           </div>
-          <button className="search-btn ">
+          <button
+            className="search-btn "
+            onClick={() => setContractSearchSheet(true)}
+          >
             <i className="icon-search"></i>
             <span>검색</span>
           </button>

@@ -20,6 +20,8 @@ type BottomSheetControlerState = {
   setPartStaffPaySheet: (isOpen: boolean) => void;
   bonusPaySheet: boolean;
   setBonusPaySheet: (isOpen: boolean) => void;
+  contractSearchSheet: boolean;
+  setContractSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -60,6 +62,13 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
       bonusPaySheet: false,
       setBonusPaySheet: (isOpen: boolean) =>
         set({ bonusPaySheet: isOpen }, false, "bottomSheet/setBonusPay"),
+      contractSearchSheet: false,
+      setContractSearchSheet: (isOpen: boolean) =>
+        set(
+          { contractSearchSheet: isOpen },
+          false,
+          "bottomSheet/setContractSearch"
+        ),
     }),
     { name: "BottomSheetControlerStore" }
   )
