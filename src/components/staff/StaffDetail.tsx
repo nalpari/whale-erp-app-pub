@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function StaffDetail() {
+  const router = useRouter();
   return (
     <div className="container sub">
       <div className="sub-tit-wrap">
@@ -60,7 +63,10 @@ export default function StaffDetail() {
                   <i className="invite"></i>
                   <span>초대링크 재전송</span>
                 </button>
-                <button className="staff-edit-btn"></button>
+                <button
+                  className="staff-edit-btn"
+                  onClick={() => router.push(`/staff/1/edit`)}
+                ></button>
               </div>
             </div>
           </div>

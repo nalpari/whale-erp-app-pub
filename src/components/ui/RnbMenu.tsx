@@ -80,19 +80,6 @@ export default function RnbMenu() {
           </dd>
         </dl>
         <dl className="rnb-menu-list">
-          <dt className="rnb-menu-tit">직원관리</dt>
-          <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
-              직원정보 관리
-            </Link>
-          </dd>
-          <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
-              근로계약관리
-            </Link>
-          </dd>
-        </dl>
-        <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">급여 명세서</dt>
           <dd className="rnb-menu-item">
             <Link href="/" className="rnb-menu-link">
