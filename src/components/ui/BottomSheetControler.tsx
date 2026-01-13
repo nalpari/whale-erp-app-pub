@@ -12,8 +12,10 @@ import ContractOptionSheet from "../bottomsheet/ContractOptionSheet";
 import PartStaffPaySheet from "../bottomsheet/PartStaffPaySheet";
 import BonusPaySheet from "../bottomsheet/BonusPaySheet";
 import ContractSearchSheet from "../bottomsheet/ContractSearchSheet";
+import FullTimerSearchSheet from "../bottomsheet/FullTimerSearchSheet";
 
 export default function BottomSheetControler() {
+  // 개별 구독으로 안정성 확보
   const storeSelectSheet = useBottomSheetControler(
     (state) => state.storeSelectSheet
   );
@@ -42,8 +44,10 @@ export default function BottomSheetControler() {
   const contractSearchSheet = useBottomSheetControler(
     (state) => state.contractSearchSheet
   );
+  const fullTimerSearchSheet = useBottomSheetControler(
+    (state) => state.fullTimerSearchSheet
+  );
   useEffect(() => {
-    // 모든 팝업 상태를 배열로 확인
     const isAnyBottomSheetOpen =
       storeSelectSheet ||
       goToOptionSheet ||
@@ -54,17 +58,15 @@ export default function BottomSheetControler() {
       contractOptionSheet ||
       partStaffPaySheet ||
       bonusPaySheet ||
-      contractSearchSheet;
+      contractSearchSheet ||
+      fullTimerSearchSheet;
 
-    // body 클래스 토글
     if (isAnyBottomSheetOpen) {
       if (!document.body.classList.contains("open")) {
-        // 👈 중복 방지
         document.body.classList.add("open");
       }
     } else {
       if (document.body.classList.contains("open")) {
-        // 👈 중복 방지
         document.body.classList.remove("open");
       }
     }
@@ -83,6 +85,7 @@ export default function BottomSheetControler() {
     partStaffPaySheet,
     bonusPaySheet,
     contractSearchSheet,
+    fullTimerSearchSheet,
   ]);
 
   return (
@@ -97,6 +100,7 @@ export default function BottomSheetControler() {
       {partStaffPaySheet && <PartStaffPaySheet />}
       {bonusPaySheet && <BonusPaySheet />}
       {contractSearchSheet && <ContractSearchSheet />}
+      {fullTimerSearchSheet && <FullTimerSearchSheet />}
     </>
   );
 }

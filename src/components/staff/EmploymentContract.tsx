@@ -27,7 +27,7 @@ export default function EmploymentContract() {
               <div className="employment-info">
                 <div className="employment-name">
                   <span className="name">김길수</span>
-                  <span className="badge org">포괄 연봉제</span>
+                  <span className="badge d-org">포괄 연봉제</span>
                 </div>
                 <div className="employment-job">
                   계약년도/통상시급/한주근무시간 설정

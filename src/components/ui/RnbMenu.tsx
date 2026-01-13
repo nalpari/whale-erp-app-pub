@@ -11,9 +11,13 @@ export default function RnbMenu() {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add("open");
+      if (!document.body.classList.contains("open")) {
+        document.body.classList.add("open");
+      }
     } else {
-      document.body.classList.remove("open");
+      if (document.body.classList.contains("open")) {
+        document.body.classList.remove("open");
+      }
     }
 
     return () => {
@@ -82,7 +86,11 @@ export default function RnbMenu() {
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">급여 명세서</dt>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link
+              href="/fulltimer"
+              className="rnb-menu-link"
+              onClick={handleClick}
+            >
               정직원 급여 명세서
             </Link>
           </dd>

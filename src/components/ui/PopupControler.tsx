@@ -8,6 +8,7 @@ import PhotoPopup from "../popup/PhotoPopup";
 import AddressSearchPop from "../popup/AddressSearchPop";
 
 export default function PopupControler() {
+  // 개별 구독으로 안정성 확보
   const aiChatPopup = usePopupControler((state) => state.aiChatPopup);
   const alertPopup = usePopupControler((state) => state.alertPopup);
   const photoPopup = usePopupControler((state) => state.photoPopup);
@@ -16,19 +17,15 @@ export default function PopupControler() {
   );
 
   useEffect(() => {
-    // 모든 팝업 상태를 배열로 확인
     const isAnyPopupOpen =
       aiChatPopup || alertPopup || photoPopup || addressSearchPopup;
 
-    // body 클래스 토글
     if (isAnyPopupOpen) {
       if (!document.body.classList.contains("open")) {
-        // 👈 중복 방지
         document.body.classList.add("open");
       }
     } else {
       if (document.body.classList.contains("open")) {
-        // 👈 중복 방지
         document.body.classList.remove("open");
       }
     }
