@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { useRouter } from "next/navigation";
 
 export default function ContractList() {
+  const router = useRouter();
   const setContractSearchSheet = useBottomSheetControler(
     (state) => state.setContractSearchSheet
   );
@@ -26,7 +28,10 @@ export default function ContractList() {
           </button>
         </div>
         <div className="staff-list-wrap">
-          <button className="staff-list-item">
+          <button
+            className="staff-list-item"
+            onClick={() => router.push("/contract/1")}
+          >
             <div className="staff-item-header">
               <div className="head-staff-info">
                 <div className="staff-icon">

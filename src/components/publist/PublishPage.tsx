@@ -135,7 +135,7 @@ export default function PublishPage() {
                     <td className="c red">2025-12-24</td>
                   </tr>
                   <tr>
-                    <td rowSpan={6}>직원 정보</td>
+                    <td rowSpan={5}>직원 정보</td>
                     <td>직원 정보 리스트</td>
                     <td>
                       <Link href={"/staff"}>StaffInfoList.tsx</Link>
@@ -176,6 +176,58 @@ export default function PublishPage() {
                     <td>
                       <Link href={"/staff/employment"}>
                         StaffEmployment.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={5}>근로 계약 정보</td>
+                    <td>근로 계약 정보 리스트</td>
+                    <td>
+                      <Link href={"/contract"}>ContractInfoList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>근로 계약 정보 상세</td>
+                    <td>
+                      <Link href={"/contract/1"}>ContractInfoDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>근로 계약 정보 수정</td>
+                    <td>
+                      <Link href={"/contract/1/edit/info"}>
+                        ContractEditInfo.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>근로 계약 근무시간 수정</td>
+                    <td>
+                      <Link href={"/contract/1/edit/time"}>
+                        ContractEditTime.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>근로 계약 급여정보</td>
+                    <td>
+                      <Link href={"/contract/1/employ"}>
+                        ContractEmploy.tsx
                       </Link>
                     </td>
                     <td></td>

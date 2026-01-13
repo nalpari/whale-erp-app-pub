@@ -4,24 +4,21 @@
 .black {
   background-color: $normal-back-color;
   color: $normal-font-color;
-  &.active,
-  &:active {
+  &.active {
     background-color: $normal-a-back-color;
   }
 }
 .blue {
   background-color: $blue-back-color;
   color: $blue-font-color;
-  &.active,
-  &:active {
+  &.active {
     background-color: $blue-a-back-color;
   }
 }
 .sky {
   background-color: $sky-back-color;
   color: $sky-font-color;
-  &.active,
-  &:active {
+  &.active {
     background-color: $sky-a-back-color;
   }
   &.brd {
@@ -31,8 +28,7 @@
 .grey {
   background-color: $grey-back-color;
   color: $grey-font-color;
-  &.active,
-  &:active {
+  &.active {
     background-color: $grey-a-back-color;
   }
 }
@@ -117,7 +113,6 @@
   border: 1px solid #abb7c2;
   color: #77828d;
   transition: all 0.15s ease-in-out;
-  &:hover,
   &.act {
     background-color: #77828d;
     color: #fff;

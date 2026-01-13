@@ -207,9 +207,10 @@
     color: #47a686;
   }
   &.org {
-    background-color: #f3a680;
-    color: #fff;
+    background-color: rgba(243, 166, 128, 0.3);
+    color: #c0663a;
     font-weight: $font-w-600;
+    border-radius: 8px;
   }
   .red_icon {
     display: block;

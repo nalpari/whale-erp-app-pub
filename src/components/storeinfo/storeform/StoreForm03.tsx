@@ -11,7 +11,7 @@ export default function StoreForm03() {
       <div className="sub-cont-item-wrap">
         <div className="sub-item-bx">
           <div className="store-img-list-tit">점포사진</div>
-          <div className="block">
+          <div className="block mb20">
             <button
               className="btn-form block blue"
               onClick={() => setPhotoSelectSheet(true)}

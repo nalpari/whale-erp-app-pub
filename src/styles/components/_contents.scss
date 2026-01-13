@@ -28,12 +28,39 @@
     }
   }
 }
+
+.filed-guide {
+  position: relative;
+  margin-top: 12px;
+  padding-left: 15px;
+  span {
+    display: block;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #505050;
+    i {
+      color: #0168ff;
+      font-weight: $font-w-600;
+    }
+  }
+  &:before {
+    content: "※";
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #505050;
+  }
+}
+
 // sub common
 .sub-tit-wrap {
   @include flex(0px);
   align-items: center;
   padding: 8px 24px 16px;
   background-color: #fff;
+  &.contract {
+    padding: 14px 24px;
+  }
   .sub-tit {
     @include fontDefinition($font-ds-20, $font-w-700, $line-h-140);
     color: #111111;
@@ -42,6 +69,10 @@
     }
     .sub-s-txt {
       @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+      color: #222;
+    }
+    .sub-xs-txt {
+      @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
       color: #222;
     }
     .sub-tit-code {
@@ -310,7 +341,6 @@
 .store-img-list {
   @include flex(8px);
   flex-direction: column;
-  margin-top: 20px;
 }
 .store-img-bx {
   @include flex(8px);
@@ -467,7 +497,7 @@
   }
   .total-pay {
     @include fontDefinition($font-ds-18, $font-w-700, $line-h-140);
-    color: #f37362;
+    color: #b7584b;
   }
 }
 
