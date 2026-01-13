@@ -334,6 +334,7 @@ export default function ContractDetail() {
                   <tr>
                     <th>토요일</th>
                     <td>
+                      <div>격주근무</div>
                       <div>07:00 ~ 22:00</div>
                       <div>15:00 ~ 17:00  브레이크타임</div>
                     </td>
@@ -341,6 +342,7 @@ export default function ContractDetail() {
                   <tr>
                     <th>일요일</th>
                     <td>
+                      <div>매주근무</div>
                       <div>07:00 ~ 22:00</div>
                     </td>
                   </tr>
