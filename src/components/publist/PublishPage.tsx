@@ -134,6 +134,54 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2025-12-24</td>
                   </tr>
+                  <tr>
+                    <td rowSpan={6}>직원 정보</td>
+                    <td>직원 정보 리스트</td>
+                    <td>
+                      <Link href={"/staff"}>StaffInfoList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>직원 정보 상세</td>
+                    <td>
+                      <Link href={"/staff/1"}>StaffInfoDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>직원 정보 수정</td>
+                    <td>
+                      <Link href={"/staff/1/edit"}>StaffInfoEdit.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>직원 초대</td>
+                    <td>
+                      <Link href={"/staff/invite"}>StaffInvite.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
+                  <tr>
+                    <td>직원 근로계약서</td>
+                    <td>
+                      <Link href={"/staff/employment"}>
+                        StaffEmployment.tsx
+                      </Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-13</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

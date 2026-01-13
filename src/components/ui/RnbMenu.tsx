@@ -21,7 +21,7 @@ export default function RnbMenu() {
     };
   }, [isMenuOpen]);
 
-  const handleStoreInfoClick = () => {
+  const handleClick = () => {
     closeMenu();
   };
 
@@ -56,7 +56,7 @@ export default function RnbMenu() {
             <Link
               href="/storeinfo"
               className="rnb-menu-link"
-              onClick={handleStoreInfoClick}
+              onClick={handleClick}
             >
               점포정보 관리
             </Link>
@@ -65,16 +65,16 @@ export default function RnbMenu() {
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">직원관리</dt>
           <dd className="rnb-menu-item">
-            <Link
-              href="/staff"
-              className="rnb-menu-link"
-              onClick={handleStoreInfoClick}
-            >
+            <Link href="/staff" className="rnb-menu-link" onClick={handleClick}>
               직원정보 관리
             </Link>
           </dd>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link
+              href="/contract"
+              className="rnb-menu-link"
+              onClick={handleClick}
+            >
               근로계약관리
             </Link>
           </dd>

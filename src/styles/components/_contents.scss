@@ -386,6 +386,18 @@
     height: 46px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    .contract-tip {
+      position: absolute;
+      top: -19px;
+      left: -6px;
+      display: block;
+      width: 59px;
+      height: 39px;
+      background: url("/assets/images/contents/contract_tip.png") no-repeat
+        center center;
+      background-size: cover;
+      z-index: 2;
+    }
   }
   .staff-info-data {
     .staff-name {
