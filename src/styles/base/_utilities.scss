@@ -194,7 +194,6 @@
   height: 24px;
   border-radius: 100px;
   @include fontDefinition($font-ds-14, $font-w-500, 24px);
-  cursor: default;
   &.red {
     background-color: #ffe8e8;
     color: #e57173;

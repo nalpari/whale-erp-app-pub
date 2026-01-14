@@ -13,6 +13,7 @@ import PartStaffPaySheet from "../bottomsheet/PartStaffPaySheet";
 import BonusPaySheet from "../bottomsheet/BonusPaySheet";
 import ContractSearchSheet from "../bottomsheet/ContractSearchSheet";
 import FullTimerSearchSheet from "../bottomsheet/FullTimerSearchSheet";
+import PaymentConditionSheet from "../bottomsheet/PaymentConditionSheet";
 
 export default function BottomSheetControler() {
   // 개별 구독으로 안정성 확보
@@ -47,6 +48,9 @@ export default function BottomSheetControler() {
   const fullTimerSearchSheet = useBottomSheetControler(
     (state) => state.fullTimerSearchSheet
   );
+  const paymentConditionSheet = useBottomSheetControler(
+    (state) => state.paymentConditionSheet
+  );
   useEffect(() => {
     const isAnyBottomSheetOpen =
       storeSelectSheet ||
@@ -59,7 +63,8 @@ export default function BottomSheetControler() {
       partStaffPaySheet ||
       bonusPaySheet ||
       contractSearchSheet ||
-      fullTimerSearchSheet;
+      fullTimerSearchSheet ||
+      paymentConditionSheet;
 
     if (isAnyBottomSheetOpen) {
       if (!document.body.classList.contains("open")) {
@@ -86,6 +91,7 @@ export default function BottomSheetControler() {
     bonusPaySheet,
     contractSearchSheet,
     fullTimerSearchSheet,
+    paymentConditionSheet,
   ]);
 
   return (
@@ -101,6 +107,7 @@ export default function BottomSheetControler() {
       {bonusPaySheet && <BonusPaySheet />}
       {contractSearchSheet && <ContractSearchSheet />}
       {fullTimerSearchSheet && <FullTimerSearchSheet />}
+      {paymentConditionSheet && <PaymentConditionSheet />}
     </>
   );
 }

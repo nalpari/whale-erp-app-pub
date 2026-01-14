@@ -147,6 +147,13 @@
     center;
   background-size: cover;
 }
+.sub-arr-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/contents/sub_arr.svg") no-repeat center center;
+  background-size: cover;
+}
 .data-filed {
   margin-bottom: 24px;
   &:last-child {
@@ -761,5 +768,77 @@
         color: #505050;
       }
     }
+  }
+}
+
+// 급여 상세 페이지
+.pay-head-btn-wrap {
+  @include flex(0px);
+  align-items: center;
+  .pay-head-btn {
+    @include flex(8px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 0;
+    background-color: #444;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #fff;
+    border-right: 1px solid #767676;
+    &:last-child {
+      border-right: none;
+    }
+    i {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &.email-icon {
+        background-image: url("/assets/images/contents/pay_email.svg");
+      }
+      &.download-icon {
+        background-image: url("/assets/images/contents/pay_down.svg");
+      }
+    }
+  }
+}
+.pay-data-list {
+  @include flex(8px);
+  flex-direction: column;
+}
+.pay-data-item {
+  @include flex(8px);
+  align-items: center;
+  .pay-data-item-tit {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #767676;
+  }
+  .pay-data-item-value {
+    margin-left: auto;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #111111;
+  }
+  &.top {
+    .pay-data-item-tit {
+      color: #111;
+      font-weight: $font-w-600;
+    }
+    .pay-data-item-value {
+      color: #b7584b;
+    }
+  }
+}
+.pay-data-guide {
+  @include flex(12px);
+  flex-direction: column;
+  dt {
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+    color: #111111;
+  }
+  dd {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #505050;
   }
 }

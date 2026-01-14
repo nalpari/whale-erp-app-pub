@@ -13,7 +13,12 @@ export default function FullTimerPayList() {
       <div className="sub-tit-wrap ">
         <div className="sub-tit">정직원 급여명세서</div>
         <div className="sub-btn-wrap">
-          <button className="btn-s black">등록</button>
+          <button
+            className="btn-s black"
+            onClick={() => router.push("/fulltimer/1")}
+          >
+            등록
+          </button>
         </div>
       </div>
       <div className="sub-content-body">
@@ -22,7 +27,7 @@ export default function FullTimerPayList() {
             검색결과 <span>128건</span>
           </div>
           <button
-            className="search-btn "
+            className="search-btn act"
             onClick={() => setFullTimerSearchSheet(true)}
           >
             <i className="icon-search"></i>
@@ -30,10 +35,7 @@ export default function FullTimerPayList() {
           </button>
         </div>
         <div className="staff-list-wrap">
-          <button
-            className="staff-list-item"
-            onClick={() => router.push("/contract/1")}
-          >
+          <div className="staff-list-item">
             <div className="staff-item-header">
               <div className="head-staff-info">
                 <div className="staff-icon">
@@ -47,15 +49,18 @@ export default function FullTimerPayList() {
                 <div className="staff-info-data">
                   <div className="staff-name">
                     <span>김길수</span>
-                    <b className="badge org">
+                    <button className="badge org">
                       <i className="email_icon"></i>이메일 전송
-                    </b>
+                    </button>
                   </div>
                   <div className="staff-job">점포직원/파트타이머/근무</div>
                 </div>
               </div>
             </div>
-            <div className="sub-item-bx ">
+            <button
+              className="sub-item-bx "
+              onClick={() => router.push("/fulltimer/1")}
+            >
               <table className="info-table">
                 <colgroup>
                   <col style={{ width: "90px" }} />
@@ -92,9 +97,9 @@ export default function FullTimerPayList() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </button>
-          <button className="staff-list-item">
+            </button>
+          </div>
+          <div className="staff-list-item">
             <div className="staff-item-header">
               <div className="head-staff-info">
                 <div className="staff-icon">
@@ -116,7 +121,7 @@ export default function FullTimerPayList() {
                 </div>
               </div>
             </div>
-            <div className="sub-item-bx">
+            <button className="sub-item-bx">
               <table className="info-table">
                 <colgroup>
                   <col style={{ width: "90px" }} />
@@ -153,9 +158,9 @@ export default function FullTimerPayList() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </button>
-          <button className="staff-list-item">
+            </button>
+          </div>
+          <div className="staff-list-item">
             <div className="staff-item-header">
               <div className="head-staff-info">
                 <div className="staff-icon">
@@ -169,15 +174,15 @@ export default function FullTimerPayList() {
                 <div className="staff-info-data">
                   <div className="staff-name">
                     <span>김민수</span>
-                    <b className="badge org">
+                    <button className="badge org">
                       <i className="email_icon"></i>이메일 전송
-                    </b>
+                    </button>
                   </div>
                   <div className="staff-job">점포직원/파트타이머/근무</div>
                 </div>
               </div>
             </div>
-            <div className="sub-item-bx">
+            <button className="sub-item-bx">
               <table className="info-table">
                 <colgroup>
                   <col style={{ width: "90px" }} />
@@ -214,8 +219,8 @@ export default function FullTimerPayList() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
