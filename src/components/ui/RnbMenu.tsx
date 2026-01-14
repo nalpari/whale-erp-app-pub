@@ -95,7 +95,11 @@ export default function RnbMenu() {
             </Link>
           </dd>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link
+              href="/parttimer"
+              className="rnb-menu-link"
+              onClick={handleClick}
+            >
               파트타이머 급여 명세서
             </Link>
           </dd>
