@@ -104,7 +104,11 @@ export default function RnbMenu() {
             </Link>
           </dd>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link
+              href="/overtime"
+              className="rnb-menu-link"
+              onClick={handleClick}
+            >
               연장근무 수당 명세서
             </Link>
           </dd>

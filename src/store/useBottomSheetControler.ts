@@ -28,6 +28,8 @@ type BottomSheetControlerState = {
   setPaymentConditionSheet: (isOpen: boolean) => void;
   partTimerSearchSheet: boolean;
   setPartTimerSearchSheet: (isOpen: boolean) => void;
+  overTimeSearchSheet: boolean;
+  setOverTimeSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -95,6 +97,13 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
           { partTimerSearchSheet: isOpen },
           false,
           "bottomSheet/setPartTimerSearch"
+        ),
+      overTimeSearchSheet: false,
+      setOverTimeSearchSheet: (isOpen: boolean) =>
+        set(
+          { overTimeSearchSheet: isOpen },
+          false,
+          "bottomSheet/setOverTimeSearch"
         ),
     }),
     { name: "BottomSheetControlerStore" }
