@@ -28,35 +28,35 @@ export default function StaffInvite() {
           {step === 3 && <InviteForm03 />}
           {step === 4 && <InviteForm04 />}
         </div>
-        <div className="content-pagination">
-          {step === 4 && (
-            <div className="mb25">
-              <button className="btn-form block blue">초대하기</button>
-            </div>
-          )}
-          <div className="pagination-wrap">
-            <button
-              className="page-btn prev"
-              disabled={step === 1}
-              onClick={handlePrev}
-            >
-              <i className="icon-arrow left"></i>
-              <span>이전</span>
-            </button>
-            <div className="page-num">
-              <span className="current">{step}</span>
-              <span>/</span>
-              <span>4</span>
-            </div>
-            <button
-              className="page-btn next"
-              disabled={step === 4}
-              onClick={handleNext}
-            >
-              <span>다음</span>
-              <i className="icon-arrow right"></i>
-            </button>
+      </div>
+      <div className="content-pagination">
+        {step === 4 && (
+          <div className="mb25">
+            <button className="btn-form block blue">초대하기</button>
           </div>
+        )}
+        <div className="pagination-wrap">
+          <button
+            className="page-btn prev"
+            disabled={step === 1}
+            onClick={handlePrev}
+          >
+            <i className="icon-arrow left"></i>
+            <span>이전</span>
+          </button>
+          <div className="page-num">
+            <span className="current">{step}</span>
+            <span>/</span>
+            <span>4</span>
+          </div>
+          <button
+            className="page-btn next"
+            disabled={step === 4}
+            onClick={handleNext}
+          >
+            <span>다음</span>
+            <i className="icon-arrow right"></i>
+          </button>
         </div>
       </div>
     </>

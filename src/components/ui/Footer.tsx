@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   const router = useRouter();
-  
+
   // selector 패턴으로 필요한 상태만 구독
   const aiChatPopup = usePopupControler((state) => state.aiChatPopup);
   const setAiChatPopup = usePopupControler((state) => state.setAiChatPopup);
@@ -28,6 +28,10 @@ export default function Footer() {
   };
 
   if (isSubPage) {
+    return null;
+  }
+
+  if (pathname.includes("/list")) {
     return null;
   }
 

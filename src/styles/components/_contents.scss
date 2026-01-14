@@ -125,6 +125,9 @@
   .sub-cont-tit {
     @include fontDefinition($font-ds-20, $font-w-700, $line-h-140);
     color: #111111;
+    &.s {
+      @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+    }
   }
 }
 .sub-cont-btn-wrap {
@@ -994,5 +997,46 @@
     @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
     color: #767676;
     text-align: right;
+  }
+}
+
+// 파트타이머 근무시간 수정
+.work-time-info {
+  @include flex(8px);
+  flex-direction: column;
+  margin-bottom: 22px;
+  .work-time-info-item {
+    @include flex(8px);
+    align-items: center;
+    .work-time-info-badge {
+      display: block;
+      height: 24px;
+      @include fontDefinition($font-ds-14, $font-w-600, 24px);
+      padding: 0px 8px;
+      border-radius: 8px;
+      &.g {
+        background-color: #ebf6f2;
+        color: #36886a;
+      }
+      &.r {
+        background-color: #fef0f0;
+        color: #d52929;
+      }
+    }
+    .work-time-info-val {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: #111111;
+    }
+  }
+}
+.work-time-data-wrap {
+  @include flex(12px);
+  flex-direction: column;
+}
+.work-time-data-item {
+  .work-time-data-item-tit {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #505050;
+    margin-bottom: 8px;
   }
 }

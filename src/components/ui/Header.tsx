@@ -14,6 +14,10 @@ export default function Header() {
     router.back();
   };
 
+  if (pathname.includes("/list")) {
+    return null;
+  }
+
   if (isSubPage) {
     return (
       <header className="header sub">
