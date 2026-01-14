@@ -876,3 +876,123 @@
     }
   }
 }
+
+// 파트타이머 급여 미리보기 페이지
+.pay-stub-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.pay-stub-item {
+  padding: 24px 20px;
+  .pay-stub-item-head {
+    @include flex(8px);
+    align-items: flex-end;
+    .pay-stub-item-head-tit {
+      @include fontDefinition(inherit, inherit, $line-h-140);
+      color: inherit;
+      span {
+        display: block;
+      }
+    }
+    .pay-stub-item-head-val {
+      margin-left: auto;
+      @include fontDefinition(inherit, inherit, $line-h-140);
+      color: inherit;
+    }
+  }
+  &.last-week {
+    background-color: #4e596e;
+    border-top: 1px solid #717a8b;
+    &.s {
+      border-top: 1px solid #717a8b;
+      padding: 16px 20px;
+    }
+    .pay-stub-item-head {
+      color: #fff;
+      font-size: $font-ds-18;
+      font-weight: $font-w-700;
+    }
+    .pay-stub-table-list {
+      color: #dcdee2;
+    }
+  }
+  &.day {
+    background-color: #fff;
+    border-top: 1px solid #eff0f1;
+    .pay-stub-item-head {
+      color: #111;
+      font-size: $font-ds-16;
+      font-weight: $font-w-500;
+      .pay-stub-item-head-val {
+        font-weight: $font-w-600;
+      }
+    }
+    .pay-stub-table-list {
+      color: #767676;
+    }
+  }
+  &.week {
+    background-color: #e7e8eb;
+    border-top: 1px solid #f4f5f6;
+    .pay-stub-item-head {
+      color: #111;
+      font-size: $font-ds-18;
+      font-weight: $font-w-700;
+    }
+    .pay-stub-table-list {
+      color: #767676;
+    }
+  }
+  &.total {
+    background-color: #27303c;
+    padding: 16px 20px;
+    .pay-stub-item-head {
+      color: #fff;
+      font-size: $font-ds-20;
+      font-weight: $font-w-700;
+    }
+  }
+  &.total-real {
+    background-color: #736d66;
+    padding: 16px 20px;
+    .pay-stub-item-head {
+      color: #fff;
+      font-size: $font-ds-20;
+      font-weight: $font-w-700;
+    }
+  }
+}
+.pay-stub-table-list {
+  @include flex(8px);
+  flex-direction: column;
+  margin-top: 10px;
+  .pay-stub-table-list-item {
+    @include flex(8px);
+    align-items: center;
+    .pay-stub-table-list-tit {
+      @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+      color: inherit;
+    }
+    .pay-stub-table-list-val {
+      margin-left: auto;
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: inherit;
+    }
+  }
+}
+.pay-stub-table {
+  width: 100%;
+  table-layout: fixed;
+  th {
+    padding: 4px;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #767676;
+    text-align: center;
+  }
+  td {
+    padding: 4px;
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #767676;
+    text-align: right;
+  }
+}

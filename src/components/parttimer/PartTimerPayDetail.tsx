@@ -1,4 +1,8 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 export default function PartTimerPayDetail() {
+  const router = useRouter();
   return (
     <div className="container sub">
       <div className="pay-head-btn-wrap">
@@ -109,9 +113,6 @@ export default function PartTimerPayDetail() {
                     />
                   </div>
                 </div>
-                <div className="block">
-                  <button className="btn-form block grey">검색</button>
-                </div>
               </div>
             </div>
             <div className="sub-item-bx">
@@ -145,8 +146,13 @@ export default function PartTimerPayDetail() {
             </div>
           </div>
         </div>
-
-        <div className="block">
+        <div className="flex g8">
+          <button
+            className="btn-form block sky brd"
+            onClick={() => router.push("/parttimer/1/stub")}
+          >
+            급여내역 미리보기
+          </button>
           <button className="btn-form block blue">저장하기</button>
         </div>
       </div>
