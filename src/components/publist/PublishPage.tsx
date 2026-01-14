@@ -234,6 +234,99 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2026-01-13</td>
                   </tr>
+                  <tr>
+                    <td rowSpan={2}>정직원 급여 명세서</td>
+                    <td>정직원 급여 명세서 리스트</td>
+                    <td>
+                      <Link href={"/fulltimer"}>FullTimerList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>정직원 급여 명세서 상세 / 등록 / 수정</td>
+                    <td>
+                      <Link href={"/fulltimer/1"}>FullTimerDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={4}>파트타이머 급여 명세서</td>
+                    <td>파트타이머 급여 명세서 리스트</td>
+                    <td>
+                      <Link href={"/parttimer"}>PartTimerList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>파트타이머 급여 명세서 상세 / 등록 / 수정</td>
+                    <td>
+                      <Link href={"/parttimer/1"}>PartTimerDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>파트타이머 급여 명세서 확인 </td>
+                    <td>
+                      <Link href={"/parttimer/1/stub"}>PartTimerStub.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>파트타이머 근무시간 수정 </td>
+                    <td>
+                      <Link href={"/parttimer/1/time"}>PartTimerTime.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={4}>연장근무 수당 명세서</td>
+                    <td>연장근무 수당 명세서 리스트</td>
+                    <td>
+                      <Link href={"/overtime"}>OverTimeList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>연장근무 수당 명세서 상세 / 등록 / 수정</td>
+                    <td>
+                      <Link href={"/overtime/1"}>OverTimeDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>연장근무 수당 명세서 확인 </td>
+                    <td>
+                      <Link href={"/overtime/1/stub"}>OverTimeStub.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td>연장근무 근무시간 수정 </td>
+                    <td>
+                      <Link href={"/overtime/1/time"}>OverTimeTime.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
