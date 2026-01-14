@@ -840,5 +840,39 @@
   dd {
     @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
     color: #505050;
+    .guide-filed-tit {
+      font-weight: $font-w-500;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// 파트타이머 급여 상세 페이지
+.work-time-edit {
+  @include flex(8px);
+  align-items: center;
+  width: 100%;
+  @include flex(8px);
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
+    0 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.04);
+  margin-bottom: 12px;
+  border: 1px solid #3e4959;
+  .work-time-edit-tit {
+    @include flex(8px);
+    align-items: center;
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+    color: #111111;
+    .time-edit-icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("/assets/images/contents/time_edit_icon.svg") no-repeat
+        center center;
+      background-size: cover;
+    }
   }
 }

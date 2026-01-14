@@ -15,7 +15,7 @@ export default function PartTimerPayList() {
         <div className="sub-btn-wrap">
           <button
             className="btn-s black"
-            onClick={() => router.push("/fulltimer/1")}
+            onClick={() => router.push("/parttimer/1")}
           >
             등록
           </button>
@@ -59,7 +59,7 @@ export default function PartTimerPayList() {
             </div>
             <button
               className="sub-item-bx "
-              onClick={() => router.push("/fulltimer/1")}
+              onClick={() => router.push("/parttimer/1")}
             >
               <table className="info-table">
                 <colgroup>

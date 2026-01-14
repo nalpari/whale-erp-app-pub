@@ -32,7 +32,7 @@ export default function FullTimerPayDetail() {
             <div className="sub-item-bx">
               <div className="data-filed">
                 <div className="filed-tit">
-                  소속 <span className="imp">*</span>
+                  본사/가맹점/점포 <span className="imp">*</span>
                 </div>
                 <div className="block mb8">
                   <select name="" id="" className="select-form">
