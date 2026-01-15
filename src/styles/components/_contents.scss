@@ -694,20 +694,6 @@
   .staff-data {
     @include flex(5px);
     align-items: center;
-    .badge {
-      display: block;
-      height: 24px;
-      @include fontDefinition($font-ds-14, $font-w-500, 24px);
-      color: #505050;
-      background-color: #e5e5e5;
-      padding: 0px 8px;
-      border-radius: 100px;
-      &.r {
-        border: 1px solid #fd5b3e;
-        background-color: #fff;
-        color: #fd5b3e;
-      }
-    }
   }
 }
 
@@ -1008,21 +994,7 @@
   .work-time-info-item {
     @include flex(8px);
     align-items: center;
-    .work-time-info-badge {
-      display: block;
-      height: 24px;
-      @include fontDefinition($font-ds-14, $font-w-600, 24px);
-      padding: 0px 8px;
-      border-radius: 8px;
-      &.g {
-        background-color: #ebf6f2;
-        color: #36886a;
-      }
-      &.r {
-        background-color: #fef0f0;
-        color: #d52929;
-      }
-    }
+
     .work-time-info-val {
       @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
       color: #111111;
@@ -1038,5 +1010,149 @@
     @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
     color: #505050;
     margin-bottom: 8px;
+  }
+}
+
+// 출퇴근 상세 페이지
+.commute-profile {
+  padding: 8px 0 28px;
+  text-align: center;
+  .profile-img {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+  }
+}
+.profile-info {
+  @include flex(8px);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  .profile-name {
+    @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+    color: #111111;
+  }
+  .profile-job {
+    @include flex(0px);
+    align-items: center;
+    span {
+      position: relative;
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: #111;
+      padding: 0 4px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 1px;
+        height: 9px;
+        background-color: #999a9a;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.profile-data {
+  @include flex(8px);
+  align-items: center;
+  justify-content: center;
+}
+
+.commute-time-wrap {
+  @include flex(8px);
+  .commute-time-tit {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #767676;
+  }
+}
+.commute-time-data {
+  margin-left: auto;
+  .commute-time-data-time {
+    @include flex(6px);
+    align-items: center;
+    justify-content: flex-end;
+    span {
+      @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+      color: #111111;
+    }
+  }
+  .commute-time-data-work {
+    @include flex(10px);
+    align-items: center;
+    margin-top: 10px;
+    .commute-time-data-work-item {
+      @include flex(6px);
+      align-items: center;
+      .time {
+        @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+        color: #111;
+      }
+    }
+  }
+}
+
+.commute-list-wrap {
+  background-color: #ffff;
+  border-radius: 16px;
+  margin-top: 12px;
+}
+.commute-list-item {
+  @include flex(8px);
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f2f3f4;
+  &.rest {
+    opacity: 0.5;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  .commute-list-tit {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #767676;
+    span {
+      display: block;
+    }
+    .badge {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.commute-list-data {
+  margin-left: auto;
+  @include flex(16px);
+  flex-direction: column;
+  .commute-list-data-item {
+    .commute-list-data-time {
+      text-align: right;
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: #767676;
+      margin-bottom: 5px;
+    }
+    .commute-list-data-work {
+      @include flex(6px);
+      align-items: center;
+      justify-content: flex-end;
+
+      .time {
+        @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+        color: #111;
+      }
+    }
   }
 }

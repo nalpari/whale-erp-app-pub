@@ -51,13 +51,13 @@ export default function PartTimerTimeEdit() {
               <div className="sub-item-bx">
                 <div className="work-time-info">
                   <div className="work-time-info-item">
-                    <div className="work-time-info-badge g">근무시간</div>
+                    <div className="badge d-green">근무시간</div>
                     <div className="work-time-info-val">
                       9시간 30분 (09:00~18:00)
                     </div>
                   </div>
                   <div className="work-time-info-item">
-                    <div className="work-time-info-badge r">계약시급</div>
+                    <div className="badge d-red">계약시급</div>
                     <div className="work-time-info-val">11,000원</div>
                   </div>
                 </div>
@@ -106,13 +106,13 @@ export default function PartTimerTimeEdit() {
               <div className="sub-item-bx">
                 <div className="work-time-info">
                   <div className="work-time-info-item">
-                    <div className="work-time-info-badge g">근무시간</div>
+                    <div className="badge d-green">근무시간</div>
                     <div className="work-time-info-val">
                       9시간 30분 (09:00~18:00)
                     </div>
                   </div>
                   <div className="work-time-info-item">
-                    <div className="work-time-info-badge r">계약시급</div>
+                    <div className="badge d-red">계약시급</div>
                     <div className="work-time-info-val">11,000원</div>
                   </div>
                 </div>

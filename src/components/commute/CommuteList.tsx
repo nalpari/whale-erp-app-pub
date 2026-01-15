@@ -48,7 +48,7 @@ export default function CommuteList() {
             </div>
             <button
               className="sub-item-bx "
-              onClick={() => router.push("/parttimer/1")}
+              onClick={() => router.push("/commute/1")}
             >
               <table className="info-table">
                 <colgroup>
@@ -105,7 +105,7 @@ export default function CommuteList() {
             </div>
             <button
               className="sub-item-bx "
-              onClick={() => router.push("/parttimer/1")}
+              onClick={() => router.push("/commute/1")}
             >
               <table className="info-table">
                 <colgroup>
@@ -162,7 +162,7 @@ export default function CommuteList() {
             </div>
             <button
               className="sub-item-bx "
-              onClick={() => router.push("/parttimer/1")}
+              onClick={() => router.push("/commute/1")}
             >
               <table className="info-table">
                 <colgroup>

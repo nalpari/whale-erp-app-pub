@@ -11,7 +11,7 @@ export default function StaffDetail() {
           <span className="sub-s-txt">근로계약서</span>
         </div>
         <div className="auto-right flex g8">
-          <span className="badge green">진행중</span>
+          <span className="badge green big">진행중</span>
           <button className="contract-arr"></button>
         </div>
       </div>
@@ -51,10 +51,10 @@ export default function StaffDetail() {
                     </div>
                   </div>
                   <div className="staff-data">
-                    <span className="badge">0026</span>
-                    <span className="badge">본사직원</span>
-                    <span className="badge">정규직</span>
-                    <span className="badge r">근무</span>
+                    <span className="badge grey">0026</span>
+                    <span className="badge grey">본사직원</span>
+                    <span className="badge grey">정규직</span>
+                    <span className="badge d-green line w">근무</span>
                   </div>
                 </div>
               </div>
