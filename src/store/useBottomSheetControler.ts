@@ -30,6 +30,8 @@ type BottomSheetControlerState = {
   setPartTimerSearchSheet: (isOpen: boolean) => void;
   overTimeSearchSheet: boolean;
   setOverTimeSearchSheet: (isOpen: boolean) => void;
+  commuteSearchSheet: boolean;
+  setCommuteSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -104,6 +106,13 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
           { overTimeSearchSheet: isOpen },
           false,
           "bottomSheet/setOverTimeSearch"
+        ),
+      commuteSearchSheet: false,
+      setCommuteSearchSheet: (isOpen: boolean) =>
+        set(
+          { commuteSearchSheet: isOpen },
+          false,
+          "bottomSheet/setCommuteSearch"
         ),
     }),
     { name: "BottomSheetControlerStore" }
