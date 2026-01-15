@@ -125,7 +125,7 @@ export default function RnbMenu() {
             </Link>
           </dd>
           <dd className="rnb-menu-item">
-            <Link href="/" className="rnb-menu-link">
+            <Link href="/plan" className="rnb-menu-link" onClick={handleClick}>
               매장별 근무 계획표
             </Link>
           </dd>

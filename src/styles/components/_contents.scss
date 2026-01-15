@@ -1156,3 +1156,117 @@
     }
   }
 }
+
+// 점포별 근무 계획표
+.plan-table-item {
+  margin-bottom: 28px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.plan-table-header {
+  @include flex(8px);
+  align-items: center;
+  margin-bottom: 12px;
+  .plan-table-day {
+    @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+    color: #111;
+  }
+}
+.plan-table-content {
+  .sub-item-bx {
+    &.full {
+      color: #3477f5;
+      .half {
+        background-color: #9fbffa;
+        border: 1px solid #9fbffa;
+      }
+    }
+    &.part {
+      color: #11b076;
+      .half {
+        background-color: #8bd5ba;
+        border: 1px solid #8bd5ba;
+      }
+    }
+    &.temporary {
+      color: #886436;
+      .half {
+        background-color: #886436;
+        border: 1px solid #886436;
+      }
+    }
+  }
+}
+
+.plan-staff-head {
+  @include flex(8px);
+  align-items: center;
+  .plan-staff-info {
+    @include flex(8px);
+    align-items: center;
+    .name {
+      @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+      color: inherit;
+    }
+    .time {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+      color: inherit;
+    }
+  }
+  .work-time {
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+    color: #111;
+  }
+}
+
+.plan-table {
+  margin-top: 18px;
+}
+.time-wrap {
+  min-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 3px;
+  .time-hour-wrap {
+    @include flex(4px);
+    align-items: center;
+    width: 100%;
+  }
+  .time-hour {
+    flex: 1;
+    @include flex(0px);
+    align-items: center;
+    height: 14px;
+    .half {
+      display: block;
+      background-color: inherit;
+      width: 100%;
+      min-width: 14px;
+      height: 100%;
+      &.rest {
+        background-color: #fff;
+      }
+      &:first-child {
+        border-radius: 2px 0 0 2px;
+        border-right: none;
+      }
+      &:last-child {
+        border-radius: 0 2px 2px 0;
+        border-left: none;
+      }
+    }
+  }
+}
+.time-num {
+  @include flex(4px);
+  align-items: center;
+  width: 100%;
+  margin-top: 4px;
+  .hour {
+    min-width: 28px;
+    flex: 1;
+    @include fontDefinition($font-ds-14, $font-w-400, $line-h-140);
+    color: #505050;
+    text-align: center;
+  }
+}

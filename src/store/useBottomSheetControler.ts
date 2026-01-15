@@ -32,6 +32,8 @@ type BottomSheetControlerState = {
   setOverTimeSearchSheet: (isOpen: boolean) => void;
   commuteSearchSheet: boolean;
   setCommuteSearchSheet: (isOpen: boolean) => void;
+  planSearchSheet: boolean;
+  setPlanSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -114,6 +116,9 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
           false,
           "bottomSheet/setCommuteSearch"
         ),
+      planSearchSheet: false,
+      setPlanSearchSheet: (isOpen: boolean) =>
+        set({ planSearchSheet: isOpen }, false, "bottomSheet/setPlanSearch"),
     }),
     { name: "BottomSheetControlerStore" }
   )
