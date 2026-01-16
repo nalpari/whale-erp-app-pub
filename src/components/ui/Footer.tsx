@@ -31,7 +31,7 @@ export default function Footer() {
     return null;
   }
 
-  if (pathname.includes("/list")) {
+  if (pathname.includes("/list") || pathname.includes("/login")) {
     return null;
   }
 

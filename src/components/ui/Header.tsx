@@ -14,7 +14,7 @@ export default function Header() {
     router.back();
   };
 
-  if (pathname.includes("/list")) {
+  if (pathname.includes("/list") || pathname.includes("/login")) {
     return null;
   }
 

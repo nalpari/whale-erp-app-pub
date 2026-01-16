@@ -62,6 +62,16 @@ export default function PublishPage() {
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Login</td>
+                    <td></td>
+                    <td>
+                      <Link href={"/login"}>Login.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
                     <td>Main</td>
                     <td></td>
                     <td>
@@ -322,6 +332,35 @@ export default function PublishPage() {
                     <td>연장근무 근무시간 수정 </td>
                     <td>
                       <Link href={"/overtime/1/time"}>OverTimeTime.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-14</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={2}>출퇴근 현황 관리</td>
+                    <td>출퇴근 현황 리스트</td>
+                    <td>
+                      <Link href={"/commute"}>CommuteList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-16</td>
+                  </tr>
+                  <tr>
+                    <td>출퇴근 현황 상세 </td>
+                    <td>
+                      <Link href={"/commute/1"}>CommuteDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-16</td>
+                  </tr>
+                  <tr>
+                    <td>점포별 근무 계획표 </td>
+                    <td>점포별 근무 계획표 </td>
+                    <td>
+                      <Link href={"/plan"}>PlanTable.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>

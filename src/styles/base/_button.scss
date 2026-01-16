@@ -32,6 +32,11 @@
     background-color: $grey-a-back-color;
   }
 }
+.login {
+  background-color: #77828d;
+  color: #fff;
+  border: 1px solid #77828d;
+}
 .outline {
   background-color: $out-back-color;
   color: $out-font-color;
@@ -43,7 +48,7 @@
 }
 .outline-g {
   background-color: #fff;
-  color: #767676;
+  color: #444;
   border: 1px solid #ddd;
   transition: all 0.15s ease-in-out;
   &.act {
@@ -75,6 +80,30 @@
   height: 24px;
   background: url("/assets/images/contents/plan_table_icon.svg") no-repeat
     center center;
+  background-size: cover;
+}
+.kakao {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/common/kakao_icon.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.naver {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/common/naver_icon.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.google {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/common/google_icon.svg") no-repeat center
+    center;
   background-size: cover;
 }
 

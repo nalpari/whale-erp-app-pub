@@ -109,6 +109,16 @@ input::-webkit-inner-spin-button {
       height: 24px;
       background-image: url("/assets/images/common/search_del.svg");
     }
+    &.show {
+      width: 16px;
+      height: 16px;
+      background-image: url("/assets/images/common/pw_show.svg");
+    }
+    &.hide {
+      width: 16px;
+      height: 16px;
+      background-image: url("/assets/images/common/pw_hidden.svg");
+    }
   }
 }
 
