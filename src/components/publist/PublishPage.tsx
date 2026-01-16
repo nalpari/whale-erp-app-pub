@@ -79,7 +79,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td rowSpan={6}>점포 정보</td>
@@ -89,7 +89,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td>점포 정보 상세</td>
@@ -98,7 +98,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td>점포 정보 등록</td>
@@ -109,7 +109,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td>점포 정보 수정</td>
@@ -120,7 +120,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td>점포 사진 수정</td>
@@ -131,7 +131,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td>점포 영업시간 수정</td>
@@ -142,7 +142,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-01-09</td>
                   </tr>
                   <tr>
                     <td rowSpan={5}>직원 정보</td>
@@ -152,7 +152,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>직원 정보 상세</td>
@@ -161,7 +161,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>직원 정보 수정</td>
@@ -170,7 +170,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>직원 초대</td>
@@ -179,7 +179,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>직원 근로계약서</td>
@@ -190,7 +190,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td rowSpan={5}>근로 계약 정보</td>
@@ -200,7 +200,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>근로 계약 정보 상세</td>
@@ -209,7 +209,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>근로 계약 정보 수정</td>
@@ -220,7 +220,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>근로 계약 근무시간 수정</td>
@@ -231,7 +231,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>근로 계약 급여정보</td>
@@ -242,7 +242,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-13</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td rowSpan={2}>정직원 급여 명세서</td>
@@ -252,7 +252,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>정직원 급여 명세서 상세 / 등록 / 수정</td>
@@ -261,7 +261,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td rowSpan={4}>파트타이머 급여 명세서</td>
@@ -271,7 +271,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>파트타이머 급여 명세서 상세 / 등록 / 수정</td>
@@ -280,7 +280,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>파트타이머 급여 명세서 확인 </td>
@@ -289,7 +289,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>파트타이머 근무시간 수정 </td>
@@ -308,7 +308,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>연장근무 수당 명세서 상세 / 등록 / 수정</td>
@@ -317,7 +317,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>연장근무 수당 명세서 확인 </td>
@@ -326,7 +326,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td>연장근무 근무시간 수정 </td>
@@ -335,7 +335,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                   <tr>
                     <td rowSpan={2}>출퇴근 현황 관리</td>
@@ -364,7 +364,7 @@ export default function PublishPage() {
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2026-01-14</td>
+                    <td className="c red">2026-01-16</td>
                   </tr>
                 </tbody>
               </table>
