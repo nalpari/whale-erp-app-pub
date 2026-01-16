@@ -366,6 +366,16 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2026-01-16</td>
                   </tr>
+                  <tr>
+                    <td>점포별 근무 계획 수립 </td>
+                    <td>점포별 근무 계획 수립 </td>
+                    <td>
+                      <Link href={"/establishment"}>EstablishmentList.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-16</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
