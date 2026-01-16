@@ -1270,3 +1270,21 @@
     text-align: center;
   }
 }
+
+// 점포별 근무 계획 수립
+.plan-time-form {
+  margin: 12px -20px 0;
+  border-top: 1px solid #f4f5f6;
+  padding: 24px 20px 0;
+}
+.plan-time-form-item {
+  margin-bottom: 14px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .plan-time-form-item-tit {
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
+    color: #111;
+    margin-bottom: 8px;
+  }
+}

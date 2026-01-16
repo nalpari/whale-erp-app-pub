@@ -1,17 +1,21 @@
 "use client";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { useRouter } from "next/navigation";
 
 export default function PlanTable() {
+  const router = useRouter();
   const setPlanSearchSheet = useBottomSheetControler(
     (state) => state.setPlanSearchSheet
   );
-
   return (
     <div className="container">
       <div className="sub-tit-wrap ">
         <div className="sub-tit">점포별 근무 계획표</div>
         <div className="sub-btn-wrap">
-          <button className="btn-s black">
+          <button
+            className="btn-s black"
+            onClick={() => router.push("/establishment")}
+          >
             <i className="plan-create"></i>
             계획 수립
           </button>
