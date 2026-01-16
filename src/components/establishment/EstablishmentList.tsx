@@ -6,6 +6,9 @@ export default function EstablishmentList() {
   const setTimeSelectSheet = useBottomSheetControler(
     (state) => state.setTimeSelectSheet
   );
+  const setWorkerEditSheet = useBottomSheetControler(
+    (state) => state.setWorkerEditSheet
+  );
   return (
     <div className="container">
       <div className="sub-tit-wrap ">
@@ -38,7 +41,10 @@ export default function EstablishmentList() {
                     <span className="time">8h</span>
                   </div>
                   <div className="auto-right">
-                    <button className="contract-arr"></button>
+                    <button
+                      className="contract-arr"
+                      onClick={() => setWorkerEditSheet(true)}
+                    ></button>
                   </div>
                 </div>
                 <div className="plan-time-form">

@@ -18,6 +18,7 @@ import PartTimerSearchSheet from "../bottomsheet/PartTimerSearchSheet";
 import OverTimeSearchSheet from "../bottomsheet/OverTimeSearchSheet";
 import CommuteSearchSheet from "../bottomsheet/CommuteSearchSheet";
 import PlanTableSearchSheet from "../bottomsheet/PlanTableSearchSheet";
+import WorkerEditSheet from "../bottomsheet/WorkerEditSheet";
 
 export default function BottomSheetControler() {
   // 개별 구독으로 안정성 확보
@@ -67,6 +68,9 @@ export default function BottomSheetControler() {
   const planSearchSheet = useBottomSheetControler(
     (state) => state.planSearchSheet
   );
+  const workerEditSheet = useBottomSheetControler(
+    (state) => state.workerEditSheet
+  );
   useEffect(() => {
     const isAnyBottomSheetOpen =
       storeSelectSheet ||
@@ -84,7 +88,8 @@ export default function BottomSheetControler() {
       partTimerSearchSheet ||
       overTimeSearchSheet ||
       commuteSearchSheet ||
-      planSearchSheet;
+      planSearchSheet ||
+      workerEditSheet;
 
     if (isAnyBottomSheetOpen) {
       if (!document.body.classList.contains("open")) {
@@ -116,6 +121,7 @@ export default function BottomSheetControler() {
     overTimeSearchSheet,
     commuteSearchSheet,
     planSearchSheet,
+    workerEditSheet,
   ]);
 
   return (
@@ -136,6 +142,7 @@ export default function BottomSheetControler() {
       {overTimeSearchSheet && <OverTimeSearchSheet />}
       {commuteSearchSheet && <CommuteSearchSheet />}
       {planSearchSheet && <PlanTableSearchSheet />}
+      {workerEditSheet && <WorkerEditSheet />}
     </>
   );
 }
