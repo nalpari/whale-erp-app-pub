@@ -15,7 +15,7 @@ export default function ChangePassword() {
         <div className="filed-tit">
         현재 비밀번호 <span className="imp">*</span>
         </div>
-        <div className="block mb8">
+        <div className="block">
           <div className="input-icon-frame">
             <input
               type={showPw ? "text" : "password"}
@@ -28,12 +28,13 @@ export default function ChangePassword() {
             ></button>
           </div>
         </div>
+        <div className="warning mt5">현재 비밀번호가 일치하지 않습니다.</div>
       </div>
       <div className="data-filed">
         <div className="filed-tit">
         신규 비밀번호 <span className="imp">*</span>
         </div>
-        <div className="block mb8">
+        <div className="block">
           <div className="input-icon-frame">
             <input
               type={showPw ? "text" : "password"}
@@ -46,12 +47,13 @@ export default function ChangePassword() {
             ></button>
           </div>
         </div>
+        <div className="warning mt5">비밀번호가 일치하지 않습니다.</div>
       </div>
       <div className="data-filed">
         <div className="filed-tit">
         비밀번호 확인 <span className="imp">*</span>
         </div>
-        <div className="block mb8">
+        <div className="block">
           <div className="input-icon-frame">
             <input
               type={showPw ? "text" : "password"}
@@ -64,6 +66,7 @@ export default function ChangePassword() {
             ></button>
           </div>
         </div>
+        <div className="warning mt5">비밀번호가 일치하지 않습니다.</div>
       </div>
     </div>
     <div className="flex g8">

@@ -62,16 +62,6 @@ export default function PublishPage() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Login</td>
-                    <td></td>
-                    <td>
-                      <Link href={"/login"}>Login.tsx</Link>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td className="c red">2025-12-24</td>
-                  </tr>
-                  <tr>
                     <td>Main</td>
                     <td></td>
                     <td>
@@ -81,6 +71,45 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2026-01-09</td>
                   </tr>
+                  <tr>
+                    <td>Change Password</td>
+                    <td></td>
+                    <td>
+                      <Link href={"/changepw"}>ChangePassword.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-19</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={3}>Login</td>
+                    <td></td>
+                    <td>
+                      <Link href={"/login"}>Login.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>ID 찾기</td>
+                    <td>
+                      <Link href={"/login/findid"}>FindId.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-19</td>
+                  </tr>
+                  <tr>
+                    <td>PW 찾기</td>
+                    <td>
+                      <Link href={"/login/findpw"}>FindPw.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-19</td>
+                  </tr>
+                  
                   <tr>
                     <td rowSpan={6}>점포 정보</td>
                     <td>점포 정보 리스트</td>
