@@ -39,7 +39,7 @@ export default function PlanTable() {
             <div className="plan-table-header">
               <div className="plan-table-day">2025.12.26 월</div>
               <div className="auto-right">
-                <button className="sub-edit-btn"></button>
+                <button className="sub-edit-btn" onClick={() => router.push("/establishment")}></button>
               </div>
             </div>
             <div className="plan-table-content">
