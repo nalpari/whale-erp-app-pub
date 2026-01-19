@@ -131,15 +131,7 @@ export default function RnbMenu() {
               점포별 근무 계획표
             </Link>
           </dd>
-          <dd className="rnb-menu-item">
-            <Link
-              href="/establishment"
-              className="rnb-menu-link"
-              onClick={handleClick}
-            >
-              점포별 근무 계획 수립
-            </Link>
-          </dd>
+          
         </dl>
         <dl className="rnb-menu-list">
           <dt className="rnb-menu-tit">기타</dt>

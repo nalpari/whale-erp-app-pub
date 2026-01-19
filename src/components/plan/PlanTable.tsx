@@ -14,7 +14,7 @@ export default function PlanTable() {
         <div className="sub-btn-wrap">
           <button
             className="btn-s black"
-            onClick={() => router.push("/establishment")}
+            onClick={() => router.push("/plan/1")}
           >
             <i className="plan-create"></i>
             계획 수립
@@ -39,7 +39,7 @@ export default function PlanTable() {
             <div className="plan-table-header">
               <div className="plan-table-day">2025.12.26 월</div>
               <div className="auto-right">
-                <button className="sub-edit-btn" onClick={() => router.push("/establishment")}></button>
+                <button className="sub-edit-btn" onClick={() => router.push("/plan/1")}></button>
               </div>
             </div>
             <div className="plan-table-content">

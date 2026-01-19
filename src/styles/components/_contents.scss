@@ -1336,3 +1336,41 @@
   margin-left: auto;
   align-self: flex-start;
 }
+
+.change_staff{
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/contents/change_staff.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.delete_staff{
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/contents/delete_staff.svg") no-repeat center
+    center;
+  background-size: cover;
+}
+.date-read{
+  @include flex(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+  background-color: #fff;
+  .date-read-icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("/assets/images/contents/date_read.svg") no-repeat center
+      center;
+    background-size: cover;
+  }
+  span{
+    @include flex(4px);
+    align-items: center;
+    @include fontDefinition($font-ds-18, $font-w-400, $line-h-140);
+    color: #111;    
+  }
+}
