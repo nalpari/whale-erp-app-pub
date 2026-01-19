@@ -113,3 +113,12 @@
 .find-form{
   margin-bottom: 16px;
 }
+.id-info{
+  @include fontDefinition($font-ds-16, $font-w-400, $line-h-140);
+  color: #222;
+  margin-bottom: 18px;
+  span{
+    color: #F97316;
+    font-weight: $font-w-500;
+  }
+}

@@ -63,7 +63,7 @@ export default function Login() {
         <div className="auto-right">
           <div className="find-id-wrap">
             <button className="find-id-btn" onClick={() => router.push("/login/findid")}>ID 찾기</button>
-            <button className="find-id-btn">비밀번호 찾기</button>
+            <button className="find-id-btn" onClick={() => router.push("/login/findpw")}>비밀번호 찾기</button>
           </div>
         </div>
       </div>

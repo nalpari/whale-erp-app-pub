@@ -32,6 +32,13 @@
     background-color: $grey-a-back-color;
   }
 }
+.l-grey{
+  background-color: #EBEDEE;
+  color: #77828D;
+  .brd{
+    border: 1px solid #77828D;
+  }
+}
 .login {
   background-color: #77828d;
   color: #fff;
