@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useMenuStore } from "@/store/useMenuStore";
+import { useRouter } from "next/navigation";
 
 export default function RnbMenu() {
+  const router = useRouter();
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   const closeMenu = useMenuStore((state) => state.closeMenu);
 
@@ -50,7 +52,7 @@ export default function RnbMenu() {
         </div>
         <div className="flex g8">
           <button className="btn-form block blue">내 정보 수정</button>
-          <button className="btn-form block sky">비밀번호 변경</button>
+          <button className="btn-form block sky" onClick={() => {router.push("/changepw"); closeMenu()}}>비밀번호 변경</button>
         </div>
       </div>
       <div className="rnb-menu-wrap">

@@ -18,7 +18,7 @@ export default function Header() {
     return null;
   }
 
-  if (isSubPage) {
+  if (isSubPage || pathname === "/changepw") {
     return (
       <header className="header sub">
         <div className="header-container">
