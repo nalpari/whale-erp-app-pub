@@ -34,8 +34,16 @@ type BottomSheetControlerState = {
   setCommuteSearchSheet: (isOpen: boolean) => void;
   planSearchSheet: boolean;
   setPlanSearchSheet: (isOpen: boolean) => void;
-  workerEditSheet: boolean;
-  setWorkerEditSheet: (isOpen: boolean) => void;
+  workerChangeSheet: boolean;
+  setWorkerChangeSheet: (isOpen: boolean) => void;
+  workerDeleteSheet: boolean;
+  setWorkerDeleteSheet: (isOpen: boolean) => void;
+  workerAddSheet: boolean;
+  setWorkerAddSheet: (isOpen: boolean) => void;
+  temporaryWorkerAddSheet: boolean;
+  setTemporaryWorkerAddSheet: (isOpen: boolean) => void;
+  workerSearchSheet: boolean;
+  setWorkerSearchSheet: (isOpen: boolean) => void;
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>()(
@@ -121,9 +129,21 @@ export const useBottomSheetControler = create<BottomSheetControlerState>()(
       planSearchSheet: false,
       setPlanSearchSheet: (isOpen: boolean) =>
         set({ planSearchSheet: isOpen }, false, "bottomSheet/setPlanSearch"),
-      workerEditSheet: false,
-      setWorkerEditSheet: (isOpen: boolean) =>
-        set({ workerEditSheet: isOpen }, false, "bottomSheet/setWorkerEdit"),
+      workerChangeSheet: false,
+      setWorkerChangeSheet: (isOpen: boolean) =>
+        set({ workerChangeSheet: isOpen }, false, "bottomSheet/setWorkerChange"),
+      workerDeleteSheet: false,
+      setWorkerDeleteSheet: (isOpen: boolean) =>
+        set({ workerDeleteSheet: isOpen }, false, "bottomSheet/setWorkerDelete"),
+      workerAddSheet: false,
+      setWorkerAddSheet: (isOpen: boolean) =>
+        set({ workerAddSheet: isOpen }, false, "bottomSheet/setWorkerAdd"),
+      temporaryWorkerAddSheet: false,
+      setTemporaryWorkerAddSheet: (isOpen: boolean) =>
+        set({ temporaryWorkerAddSheet: isOpen }, false, "bottomSheet/setTemporaryWorkerAdd"),
+      workerSearchSheet: false,
+      setWorkerSearchSheet: (isOpen: boolean) =>
+        set({ workerSearchSheet: isOpen }, false, "bottomSheet/setWorkerSearch"),
     }),
     { name: "BottomSheetControlerStore" }
   )

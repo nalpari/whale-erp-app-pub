@@ -18,7 +18,11 @@ import PartTimerSearchSheet from "../bottomsheet/PartTimerSearchSheet";
 import OverTimeSearchSheet from "../bottomsheet/OverTimeSearchSheet";
 import CommuteSearchSheet from "../bottomsheet/CommuteSearchSheet";
 import PlanTableSearchSheet from "../bottomsheet/PlanTableSearchSheet";
-import WorkerEditSheet from "../bottomsheet/WorkerEditSheet";
+import WorkerChangeSheet from "../bottomsheet/WorkerChangeSheet";
+import WorkerDeleteSheet from "../bottomsheet/WorkerDeleteSheet";
+import WorkerAddSheet from "../bottomsheet/WorkerAddSheet";
+import TemporaryWorkerAddSheet from "../bottomsheet/TemporaryWorkerAddSheet";
+import WorkerSearchSheet from "../bottomsheet/WorkerSearchSheet";
 
 export default function BottomSheetControler() {
   // 개별 구독으로 안정성 확보
@@ -68,8 +72,20 @@ export default function BottomSheetControler() {
   const planSearchSheet = useBottomSheetControler(
     (state) => state.planSearchSheet
   );
-  const workerEditSheet = useBottomSheetControler(
-    (state) => state.workerEditSheet
+  const workerChangeSheet = useBottomSheetControler(
+    (state) => state.workerChangeSheet
+  );
+  const workerDeleteSheet = useBottomSheetControler(
+    (state) => state.workerDeleteSheet
+  );
+  const workerAddSheet = useBottomSheetControler(
+    (state) => state.workerAddSheet
+  );
+  const temporaryWorkerAddSheet = useBottomSheetControler(
+    (state) => state.temporaryWorkerAddSheet
+  );
+  const workerSearchSheet = useBottomSheetControler(
+    (state) => state.workerSearchSheet
   );
   useEffect(() => {
     const isAnyBottomSheetOpen =
@@ -89,7 +105,11 @@ export default function BottomSheetControler() {
       overTimeSearchSheet ||
       commuteSearchSheet ||
       planSearchSheet ||
-      workerEditSheet;
+      workerChangeSheet ||
+      workerDeleteSheet ||
+      workerAddSheet ||
+      temporaryWorkerAddSheet ||
+      workerSearchSheet;
 
     if (isAnyBottomSheetOpen) {
       if (!document.body.classList.contains("open")) {
@@ -121,7 +141,11 @@ export default function BottomSheetControler() {
     overTimeSearchSheet,
     commuteSearchSheet,
     planSearchSheet,
-    workerEditSheet,
+    workerChangeSheet,
+    workerDeleteSheet,
+    workerAddSheet,
+    temporaryWorkerAddSheet,
+    workerSearchSheet,
   ]);
 
   return (
@@ -142,7 +166,11 @@ export default function BottomSheetControler() {
       {overTimeSearchSheet && <OverTimeSearchSheet />}
       {commuteSearchSheet && <CommuteSearchSheet />}
       {planSearchSheet && <PlanTableSearchSheet />}
-      {workerEditSheet && <WorkerEditSheet />}
+      {workerChangeSheet && <WorkerChangeSheet />}
+      {workerDeleteSheet && <WorkerDeleteSheet />}
+      {workerAddSheet && <WorkerAddSheet />}
+      {temporaryWorkerAddSheet && <TemporaryWorkerAddSheet />}
+      {workerSearchSheet && <WorkerSearchSheet />}
     </>
   );
 }

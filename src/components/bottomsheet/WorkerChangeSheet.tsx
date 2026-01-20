@@ -1,25 +1,23 @@
 "use client";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import Image from "next/image";
-import { useState } from "react";
 import { Sheet } from "react-modal-sheet";
 
-export default function WorkerEditSheet() {
-  const workerEditSheet = useBottomSheetControler(
-    (state) => state.workerEditSheet
+export default function WorkerChangeSheet() {
+  const workerChangeSheet = useBottomSheetControler(
+    (state) => state.workerChangeSheet
   );
-  const setWorkerEditSheet = useBottomSheetControler(
-    (state) => state.setWorkerEditSheet
+  const setWorkerChangeSheet = useBottomSheetControler(
+    (state) => state.setWorkerChangeSheet
   );
-  const [editType, setEditType] = useState(false);
 
   const handleClose = () => {
-    setWorkerEditSheet(false);
+    setWorkerChangeSheet(false);
   };
 
   return (
     <Sheet
-      isOpen={workerEditSheet}
+      isOpen={workerChangeSheet}
       onClose={handleClose}
       detent="content"
       disableScrollLocking={true}
@@ -29,14 +27,14 @@ export default function WorkerEditSheet() {
         <Sheet.Content>
           <div className="bottom-sheet">
             <div className="bottom-sheet-header">
-              <h3>근무자 편집</h3>
+              <h3>근무자 교체</h3>
             </div>
             <div className=" bottom-sheet-body">
               <div className="sheet-data-wrap">
                 <div className="worker-info-wrap full">
                   <div className="worker-img">
                     <Image
-                      src="assets/images/layout/avatar01.svg"
+                      src="/assets/images/layout/avatar02.svg"
                       alt="근무자 이미지"
                       width={46}
                       height={46}
@@ -44,18 +42,16 @@ export default function WorkerEditSheet() {
                   </div>
                   <div className="worker-info">
                     <div className="worker-name">
-                      <span>김직원 님</span>에 대한
+                      <span>김직원 님</span>의
+                      <span className="badge blue ml5">정직원 4h</span>
                     </div>
-                    <div className="worker-name">변경할 항목을 선택하세요.</div>
-                  </div>
-                  <div className="work-badge-wrap">
-                    <span className="badge blue">정직원 4h</span>
+                    <div className="worker-name">교체 근무자를 선택하세요.</div>
                   </div>
                 </div>
                 <div className="worker-info-wrap part">
                   <div className="worker-img">
                     <Image
-                      src="assets/images/layout/avatar01.svg"
+                      src="/assets/images/layout/avatar01.svg"
                       alt="근무자 이미지"
                       width={46}
                       height={46}
@@ -63,18 +59,16 @@ export default function WorkerEditSheet() {
                   </div>
                   <div className="worker-info">
                     <div className="worker-name">
-                      <span>김직원 님</span>에 대한
+                      <span>김직원 님</span>의
+                      <span className="badge green ml5">파트 4h</span>
                     </div>
-                    <div className="worker-name">변경할 항목을 선택하세요.</div>
-                  </div>
-                  <div className="work-badge-wrap">
-                    <span className="badge green">파트 4h</span>
+                    <div className="worker-name">교체 근무자를 선택하세요.</div>
                   </div>
                 </div>
                 <div className="worker-info-wrap temporary">
                   <div className="worker-img">
                     <Image
-                      src="assets/images/layout/avatar01.svg"
+                      src="/assets/images/layout/avatar01.svg"
                       alt="근무자 이미지"
                       width={46}
                       height={46}
@@ -82,34 +76,13 @@ export default function WorkerEditSheet() {
                   </div>
                   <div className="worker-info">
                     <div className="worker-name">
-                      <span>김직원 님</span>에 대한
+                      <span>김직원 님</span>의
+                      <span className="badge brown ml5">임시 4h</span>
                     </div>
-                    <div className="worker-name">변경할 항목을 선택하세요.</div>
-                  </div>
-                  <div className="work-badge-wrap">
-                    <span className="badge brown">임시 4h</span>
+                    <div className="worker-name">교체 근무자를 선택하세요.</div>
                   </div>
                 </div>
-                <div className="flex g8">
-                  <div className="block">
-                    <button
-                      className={`radio-btn block ${editType ? "" : "act"}`}
-                      onClick={() => setEditType(false)}
-                    >
-                      삭제
-                    </button>
-                  </div>
-                  <div className="block">
-                    <button
-                      className={`radio-btn block ${editType ? "act" : ""}`}
-                      onClick={() => setEditType(true)}
-                    >
-                      교체
-                    </button>
-                  </div>
-                </div>
-                {editType && (
-                  <div className="sheet-data-filed">
+                <div className="sheet-data-filed">
                     <div className="filed-tit">
                       교체 근무자<span className="imp"> *</span>
                     </div>
@@ -121,12 +94,10 @@ export default function WorkerEditSheet() {
                       </select>
                     </div>
                   </div>
-                )}
               </div>
             </div>
             <div className="bottom-sheet-footer">
-              <button className="btn-form sky">취소</button>
-              <button className="btn-form blue">저장</button>
+              <button className="btn-form blue">교체</button>
             </div>
           </div>
         </Sheet.Content>

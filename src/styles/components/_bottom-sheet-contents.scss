@@ -145,3 +145,51 @@
     color: #111;
   }
 }
+
+.worker-info-wrap {
+  @include flex(8px);
+  align-items: center;
+  .worker-img {
+    flex: none;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .worker-info {
+    .worker-name {
+      @include fontDefinition($font-ds-18, $font-w-500, $line-h-140);
+      color: #111111;
+      span {
+        color: inherit;
+        font-weight: $font-w-700;
+      }
+    }
+  }
+  &.full {
+    .worker-name {
+      span {
+        color: #3477f5;
+      }
+    }
+  }
+  &.part {
+    .worker-name {
+      span {
+        color: #11b076;
+      }
+    }
+  }
+  &.temporary {
+    .worker-name {
+      span {
+        color: #886436;
+      }
+    }
+  }
+}
+.work-badge-wrap {
+  margin-left: auto;
+  align-self: flex-start;
+}
