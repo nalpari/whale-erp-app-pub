@@ -59,7 +59,6 @@
 
 .sales-value-wrap {
   padding: 17px 0 15px;
-  border-bottom: 1px solid #555f6d;
   .sales-value {
     @include fontDefinition($font-ds-28, $font-w-700, $line-h-150);
     color: #b1ffc3;
@@ -75,7 +74,10 @@
 }
 
 .total-sales-data {
-  padding-top: 24px;
+  padding: 18px 24px;
+  margin: 0 -16px -12px;
+  background-color: #fff;
+  border-radius: 28px;
   .sales-data-list {
     @include flex(10px);
     flex-direction: column;
@@ -83,12 +85,12 @@
   .sales-data {
     .sales-data-tit {
       @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
-      color: #f2f2f2;
+      color: #3E4959;
     }
     .sales-data-val {
       margin-left: auto;
       @include fontDefinition($font-ds-15, $font-w-600, $line-h-140);
-      color: #f2f2f2;
+      color: #3E4959;
     }
   }
 }
