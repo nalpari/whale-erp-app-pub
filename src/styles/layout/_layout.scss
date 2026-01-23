@@ -184,8 +184,9 @@
     height: 46px;
     background-color: #e8e8e8;
   }
-  .profile-info {
+  .rnb-info {
     p {
+      display: block;
       @include fontDefinition($font-ds-20, $font-w-400, $line-h-140);
       color: #111111;
       span {
@@ -197,7 +198,7 @@
 
 .rnb-menu-wrap {
   padding: 32px 24px;
-  height: calc(100vh - 66px - 202px);
+  height: calc(100vh - 66px - 258px);
   overflow-y: auto;
   .rnb-menu-list-wrap {
     height: 100%;
@@ -230,5 +231,14 @@
       }
     }
   }
+}
+.logout-btn{
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 16px;
+  margin-top: -18px;
+  @include fontDefinition($font-ds-18, $font-w-600, $line-h-140);
+  color: #505050;
 }
 
