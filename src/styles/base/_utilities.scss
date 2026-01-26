@@ -205,6 +205,10 @@
         center center;
       background-size: cover;
     }
+    &.brd-w{
+      border: 1px solid #e57173;
+      background-color: #fff;
+    }
   }
   &.d-red {
     background-color: #fef0f0;
@@ -213,6 +217,10 @@
   &.blue {
     background-color: #eff7ff;
     color: #4393f0;
+    &.brd-w{
+      border: 1px solid #4393f0;
+      background-color: #fff;
+    }
   }
   &.green {
     background-color: #e1f3ed;
@@ -226,6 +234,14 @@
       &.w {
         background-color: #ffff;
       }
+    }
+  }
+  &.l-org{
+    background-color: #fde3e0;
+    color: #F29436;
+    &.brd-w{
+      border: 1px solid #F29436;
+      background-color: #fff;
     }
   }
   &.org {

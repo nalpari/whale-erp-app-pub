@@ -1328,3 +1328,61 @@
     color: #111;    
   }
 }
+
+/************************ 사업자 정보 확인 및 수정 ************************/
+
+.master-info-header {
+  @include flex(8px);
+  align-items: center;
+  margin-bottom: 16px;
+  .bp-code {
+    @include flex(0px);
+    align-items: center;
+    flex: none;
+    span{
+      display: block;
+      @include fontDefinition($font-ds-16, $font-w-500, $line-h-140);
+      color: #111;
+    }
+    .bp-code-tit {
+      position: relative;
+      padding-right: 4px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -1px;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 10px;
+        background-color: #999A9A;
+      }
+    }
+    .bp-code-txt {
+      padding-left: 4px;
+    }
+  }
+  .master-info-badge {
+    @include flex(5px);
+    align-items: center;
+  }
+}
+
+.avatar-wrap {
+  @include flex(0px);
+  align-items: center;
+  justify-content: space-between;
+  .avatar-img {
+    display: block;
+    width: 62px;
+    height: 62px;
+    border: 1px solid #E5E5E5;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.15s ease-in-out;
+    &.act{
+      background-color: #CED2D6;
+      border-color: #CED2D6;
+    }
+  }
+}

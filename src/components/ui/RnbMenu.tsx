@@ -52,7 +52,7 @@ export default function RnbMenu() {
         </div>
         <div className="block">
           <div className="block mb8">
-            <button className="btn-form block blue ">사업자정보 확인 및 수정</button>
+            <button className="btn-form block blue" onClick={() => {router.push("/master-info"); closeMenu()}}>사업자정보 확인 및 수정</button>
           </div>
           <div className="block">
             <button className="btn-form block sky" onClick={() => {router.push("/changepw"); closeMenu()}}>비밀번호 변경</button>
