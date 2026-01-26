@@ -395,7 +395,25 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2026-01-16</td>
                   </tr>
-                  
+                  <tr>
+                    <td rowSpan={2}>사업자 정보 확인 및 수정</td>
+                    <td>사업자 정보 확인</td>
+                    <td>
+                      <Link href={"/master-info"}>MasterInfo.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-26</td>
+                  </tr>
+                  <tr>
+                    <td>사업자 정보 수정</td>
+                    <td>
+                      <Link href={"/master-info/1"}>MasterInfoEdit.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-01-26</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
