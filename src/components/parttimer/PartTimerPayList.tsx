@@ -1,13 +1,13 @@
-"use client";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+'use client'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useBottomSheetControler } from '@/store/useBottomSheetControler'
 
 export default function PartTimerPayList() {
-  const router = useRouter();
+  const router = useRouter()
   const setPartTimerSearchSheet = useBottomSheetControler(
-    (state) => state.setPartTimerSearchSheet
-  );
+    (state) => state.setPartTimerSearchSheet,
+  )
   return (
     <div className="container">
       <div className="sub-tit-wrap ">
@@ -15,7 +15,7 @@ export default function PartTimerPayList() {
         <div className="sub-btn-wrap">
           <button
             className="btn-s black"
-            onClick={() => router.push("/parttimer/1")}
+            onClick={() => router.push('/parttimer/1')}
           >
             등록
           </button>
@@ -59,11 +59,12 @@ export default function PartTimerPayList() {
             </div>
             <button
               className="sub-item-bx "
-              onClick={() => router.push("/parttimer/1")}
+              onClick={() => router.push('/parttimer/1')}
             >
+              <div className="pay-title">2025년 1월 급여</div>
               <table className="info-table">
                 <colgroup>
-                  <col style={{ width: "90px" }} />
+                  <col style={{ width: '90px' }} />
                   <col />
                 </colgroup>
                 <tbody>
@@ -122,9 +123,10 @@ export default function PartTimerPayList() {
               </div>
             </div>
             <button className="sub-item-bx">
+              <div className="pay-title">2025년 1월 급여</div>
               <table className="info-table">
                 <colgroup>
-                  <col style={{ width: "90px" }} />
+                  <col style={{ width: '90px' }} />
                   <col />
                 </colgroup>
                 <tbody>
@@ -183,9 +185,10 @@ export default function PartTimerPayList() {
               </div>
             </div>
             <button className="sub-item-bx">
+              <div className="pay-title">2025년 1월 급여</div>
               <table className="info-table">
                 <colgroup>
-                  <col style={{ width: "90px" }} />
+                  <col style={{ width: '90px' }} />
                   <col />
                 </colgroup>
                 <tbody>
@@ -224,5 +227,5 @@ export default function PartTimerPayList() {
         </div>
       </div>
     </div>
-  );
+  )
 }

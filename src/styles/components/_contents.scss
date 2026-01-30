@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 .tooltip-btn {
   position: relative;
   display: inline-block;
@@ -7,7 +7,7 @@
     display: block;
     width: 20px;
     height: 20px;
-    background: url("/assets/images/contents/tooltip_icon.svg") no-repeat center;
+    background: url('/assets/images/contents/tooltip_icon.svg') no-repeat center;
     background-size: cover;
     transition: all 0.15s ease-in-out;
   }
@@ -43,7 +43,7 @@
     }
   }
   &:before {
-    content: "※";
+    content: '※';
     position: absolute;
     left: 0;
     top: 0;
@@ -101,8 +101,11 @@
   padding: 24px 20px 28px;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
-    0 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 0 1px 0 rgba(0, 0, 0, 0),
+    0 0 1px 0 rgba(0, 0, 0, 0.01),
+    0 0 1px 0 rgba(0, 0, 0, 0.03),
+    0 0 1px 0 rgba(0, 0, 0, 0.04);
   margin-bottom: 12px;
   &.s {
     margin-bottom: 6px;
@@ -138,7 +141,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/sub_edit.svg") no-repeat center
+  background: url('/assets/images/contents/sub_edit.svg') no-repeat center
     center;
   background-size: cover;
 }
@@ -146,7 +149,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/sub_down_btn.svg") no-repeat center
+  background: url('/assets/images/contents/sub_down_btn.svg') no-repeat center
     center;
   background-size: cover;
 }
@@ -154,7 +157,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/sub_arr.svg") no-repeat center center;
+  background: url('/assets/images/contents/sub_arr.svg') no-repeat center center;
   background-size: cover;
 }
 .data-filed {
@@ -229,7 +232,7 @@
         display: block;
         width: 10px;
         height: 10px;
-        background: url("/assets/images/contents/search_dot.svg") no-repeat
+        background: url('/assets/images/contents/search_dot.svg') no-repeat
           center center;
         background-size: cover;
         transform: translateY(-1px);
@@ -276,7 +279,7 @@
     display: block;
     width: 7px;
     height: 12px;
-    background: url("/assets/images/contents/cont_page_arr.svg") no-repeat
+    background: url('/assets/images/contents/cont_page_arr.svg') no-repeat
       center center;
     background-size: cover;
     &.right {
@@ -288,7 +291,7 @@
     color: #767676;
     cursor: default;
     .icon-arrow {
-      background: url("/assets/images/contents/cont_page_arr_disabled.svg")
+      background: url('/assets/images/contents/cont_page_arr_disabled.svg')
         no-repeat center center;
     }
   }
@@ -328,7 +331,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/assets/images/contents/img_del.svg") no-repeat center
+    background: url('/assets/images/contents/img_del.svg') no-repeat center
       center;
     background-size: cover;
   }
@@ -336,7 +339,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/assets/images/contents/img_show.svg") no-repeat center
+    background: url('/assets/images/contents/img_show.svg') no-repeat center
       center;
     background-size: cover;
   }
@@ -403,14 +406,14 @@
     &.check {
       color: #f37362;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
         width: 24px;
         height: 24px;
-        background: url("/assets/images/contents/invite_check.svg") no-repeat
+        background: url('/assets/images/contents/invite_check.svg') no-repeat
           center center;
         background-size: cover;
       }
@@ -433,7 +436,7 @@
       display: block;
       width: 59px;
       height: 39px;
-      background: url("/assets/images/contents/contract_tip.png") no-repeat
+      background: url('/assets/images/contents/contract_tip.png') no-repeat
         center center;
       background-size: cover;
       z-index: 2;
@@ -451,7 +454,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        background: url("/assets/images/contents/include_memo.svg") no-repeat
+        background: url('/assets/images/contents/include_memo.svg') no-repeat
           center center;
         background-size: cover;
       }
@@ -483,7 +486,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/contract_arr.svg") no-repeat center
+  background: url('/assets/images/contents/contract_arr.svg') no-repeat center
     center;
   background-size: cover;
 }
@@ -550,7 +553,7 @@
       color: #111111;
       padding: 0 6px;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         right: 0;
@@ -574,7 +577,7 @@
 .employment-btn {
   width: 24px;
   height: 24px;
-  background: url("/assets/images/contents/employment_btn.svg") no-repeat center
+  background: url('/assets/images/contents/employment_btn.svg') no-repeat center
     center;
   background-size: cover;
 }
@@ -617,7 +620,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/assets/images/contents/memo_icon_black.svg") no-repeat
+    background: url('/assets/images/contents/memo_icon_black.svg') no-repeat
       center center;
     background-size: cover;
   }
@@ -644,7 +647,7 @@
       left: -6px;
       width: 67px;
       height: 39px;
-      background: url("/assets/images/contents/staff_request_tip.png") no-repeat
+      background: url('/assets/images/contents/staff_request_tip.png') no-repeat
         center center;
       background-size: cover;
       z-index: 1;
@@ -671,7 +674,7 @@
         color: #111111;
         padding: 0 4px;
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 5px;
           right: 0;
@@ -718,7 +721,7 @@
     flex: none;
     width: 44px;
     height: 44px;
-    background: url("/assets/images/contents/edit_icon_l.svg") no-repeat center
+    background: url('/assets/images/contents/edit_icon_l.svg') no-repeat center
       center;
     background-size: cover;
   }
@@ -761,6 +764,11 @@
 }
 
 // 급여 상세 페이지
+.pay-title {
+  @include fontDefinition($font-ds-16, $font-w-600, $line-h-140);
+  margin-bottom: 12px;
+  color: #111111;
+}
 .pay-head-btn-wrap {
   @include flex(0px);
   align-items: center;
@@ -785,10 +793,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       &.email-icon {
-        background-image: url("/assets/images/contents/pay_email.svg");
+        background-image: url('/assets/images/contents/pay_email.svg');
       }
       &.download-icon {
-        background-image: url("/assets/images/contents/pay_down.svg");
+        background-image: url('/assets/images/contents/pay_down.svg');
       }
     }
   }
@@ -846,8 +854,11 @@
   padding: 12px 20px;
   background-color: #fff;
   border-radius: 6px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0), 0 0 1px 0 rgba(0, 0, 0, 0.01),
-    0 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 0 1px 0 rgba(0, 0, 0, 0),
+    0 0 1px 0 rgba(0, 0, 0, 0.01),
+    0 0 1px 0 rgba(0, 0, 0, 0.03),
+    0 0 1px 0 rgba(0, 0, 0, 0.04);
   margin-bottom: 12px;
   border: 1px solid #3e4959;
   .work-time-edit-tit {
@@ -859,7 +870,7 @@
       display: block;
       width: 24px;
       height: 24px;
-      background: url("/assets/images/contents/time_edit_icon.svg") no-repeat
+      background: url('/assets/images/contents/time_edit_icon.svg') no-repeat
         center center;
       background-size: cover;
     }
@@ -1045,7 +1056,7 @@
       color: #111;
       padding: 0 4px;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 5px;
         right: 0;
@@ -1289,43 +1300,41 @@
   }
 }
 
-
-
-.change_staff{
+.change_staff {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/change_staff.svg") no-repeat center
+  background: url('/assets/images/contents/change_staff.svg') no-repeat center
     center;
   background-size: cover;
 }
-.delete_staff{
+.delete_staff {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/contents/delete_staff.svg") no-repeat center
+  background: url('/assets/images/contents/delete_staff.svg') no-repeat center
     center;
   background-size: cover;
 }
-.date-read{
+.date-read {
   @include flex(8px);
   align-items: center;
   justify-content: center;
   padding: 18px 0;
   background-color: #fff;
-  .date-read-icon{
+  .date-read-icon {
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/assets/images/contents/date_read.svg") no-repeat center
+    background: url('/assets/images/contents/date_read.svg') no-repeat center
       center;
     background-size: cover;
   }
-  span{
+  span {
     @include flex(4px);
     align-items: center;
     @include fontDefinition($font-ds-18, $font-w-400, $line-h-140);
-    color: #111;    
+    color: #111;
   }
 }
 
@@ -1339,7 +1348,7 @@
     @include flex(0px);
     align-items: center;
     flex: none;
-    span{
+    span {
       display: block;
       @include fontDefinition($font-ds-16, $font-w-500, $line-h-140);
       color: #111;
@@ -1348,14 +1357,14 @@
       position: relative;
       padding-right: 4px;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         right: -1px;
         transform: translateY(-50%);
         width: 1px;
         height: 10px;
-        background-color: #999A9A;
+        background-color: #999a9a;
       }
     }
     .bp-code-txt {
@@ -1376,13 +1385,13 @@
     display: block;
     width: 62px;
     height: 62px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     border-radius: 50%;
     background-color: #fff;
     transition: all 0.15s ease-in-out;
-    &.act{
-      background-color: #CED2D6;
-      border-color: #CED2D6;
+    &.act {
+      background-color: #ced2d6;
+      border-color: #ced2d6;
     }
   }
 }
