@@ -133,6 +133,10 @@
     }
   }
 }
+.sub-btn-txt {
+  @include fontDefinition($font-ds-16, $font-w-500, $line-h-140);
+  color: #767676;
+}
 .sub-cont-btn-wrap {
   margin-left: auto;
   flex: none;

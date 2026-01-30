@@ -1,10 +1,10 @@
-"use client";
-import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+'use client'
+import { useBottomSheetControler } from '@/store/useBottomSheetControler'
 
 export default function FullTimerPayDetail() {
   const setPaymentConditionSheet = useBottomSheetControler(
-    (state) => state.setPaymentConditionSheet
-  );
+    (state) => state.setPaymentConditionSheet,
+  )
   return (
     <>
       <div className="container sub">
@@ -174,11 +174,14 @@ export default function FullTimerPayDetail() {
                 <div className="sub-cont-tit">
                   급여정보<span className="imp"> *</span>
                 </div>
-                <div className="sub-cont-btn-wrap">
+                <div className="auto-right ">
                   <button
-                    className="sub-arr-btn"
+                    className="flex g8"
                     onClick={() => setPaymentConditionSheet(true)}
-                  ></button>
+                  >
+                    <span className="sub-btn-txt">상세내역 설정</span>
+                    <i className="sub-arr-btn"></i>
+                  </button>
                 </div>
               </div>
               <div className="sub-item-bx">
@@ -192,7 +195,7 @@ export default function FullTimerPayDetail() {
                     <div className="pay-data-item-value">35,000원</div>
                   </div>
                   <div className="pay-data-item">
-                    <div className="pay-data-item-tit">연장수당</div>
+                    <div className="pay-data-item-tit">공제총액</div>
                     <div className="pay-data-item-value">35,000원</div>
                   </div>
                 </div>
@@ -236,7 +239,7 @@ export default function FullTimerPayDetail() {
               <div className="sub-item-bx">
                 <table className="info-table">
                   <colgroup>
-                    <col style={{ width: "95px" }} />
+                    <col style={{ width: '95px' }} />
                     <col />
                   </colgroup>
                   <tbody>
@@ -269,5 +272,5 @@ export default function FullTimerPayDetail() {
         <button className="btn-form block blue">저장하기</button>
       </div>
     </>
-  );
+  )
 }
