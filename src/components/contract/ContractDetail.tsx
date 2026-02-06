@@ -1,16 +1,16 @@
-"use client";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+'use client'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useBottomSheetControler } from '@/store/useBottomSheetControler'
 
 export default function ContractDetail() {
-  const router = useRouter();
+  const router = useRouter()
   const setPartStaffPaySheet = useBottomSheetControler(
-    (state) => state.setPartStaffPaySheet
-  );
+    (state) => state.setPartStaffPaySheet,
+  )
   const setBonusPaySheet = useBottomSheetControler(
-    (state) => state.setBonusPaySheet
-  );
+    (state) => state.setBonusPaySheet,
+  )
   return (
     <>
       <div className="container sub">
@@ -44,10 +44,10 @@ export default function ContractDetail() {
                       </div>
                     </div>
                     <div className="staff-data">
-                      <span className="badge">0026</span>
-                      <span className="badge">본사직원</span>
-                      <span className="badge">정규직</span>
-                      <span className="badge r">근무</span>
+                      <span className="badge grey">0026</span>
+                      <span className="badge grey">본사직원</span>
+                      <span className="badge grey">정규직</span>
+                      <span className="badge d-green line w">근무</span>
                     </div>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function ContractDetail() {
               <div className="sub-item-bx">
                 <table className="info-table">
                   <colgroup>
-                    <col style={{ width: "90px" }} />
+                    <col style={{ width: '90px' }} />
                     <col />
                   </colgroup>
                   <tbody>
@@ -95,14 +95,14 @@ export default function ContractDetail() {
                 <div className="sub-cont-btn-wrap">
                   <button
                     className="sub-edit-btn"
-                    onClick={() => router.push("/contract/1/edit/info")}
+                    onClick={() => router.push('/contract/1/edit/info')}
                   ></button>
                 </div>
               </div>
               <div className="sub-item-bx">
                 <table className="info-table">
                   <colgroup>
-                    <col style={{ width: "90px" }} />
+                    <col style={{ width: '90px' }} />
                     <col />
                   </colgroup>
                   <tbody>
@@ -165,7 +165,7 @@ export default function ContractDetail() {
                 <div className="sub-cont-btn-wrap">
                   <button
                     className="sub-edit-btn"
-                    onClick={() => router.push("/contract/1/employ")}
+                    onClick={() => router.push('/contract/1/employ')}
                   ></button>
                 </div>
               </div>
@@ -179,8 +179,8 @@ export default function ContractDetail() {
                 <table className="pay-table">
                   <colgroup>
                     <col />
-                    <col width={"50px"} />
-                    <col width={"105px"} />
+                    <col width={'50px'} />
+                    <col width={'105px'} />
                   </colgroup>
                   <tbody>
                     <tr>
@@ -313,14 +313,14 @@ export default function ContractDetail() {
                 <div className="sub-cont-btn-wrap">
                   <button
                     className="sub-edit-btn"
-                    onClick={() => router.push("/contract/1/edit/time")}
+                    onClick={() => router.push('/contract/1/edit/time')}
                   ></button>
                 </div>
               </div>
               <div className="sub-item-bx">
                 <table className="info-table">
                   <colgroup>
-                    <col style={{ width: "60px" }} />
+                    <col style={{ width: '60px' }} />
                     <col />
                   </colgroup>
                   <tbody>
@@ -352,6 +352,134 @@ export default function ContractDetail() {
               </div>
             </div>
           </div>
+          <div className="sub-cont-wrap">
+            <div className="sub-cont-item-wrap">
+              <div className="sub-cont-tit-wrap">
+                <div className="sub-cont-tit">계약이력</div>
+              </div>
+              <div className="sub-item-bx">
+                <div className="employment-bx">
+                  <div className="employment-num">No.3</div>
+                  <table className="info-table">
+                    <colgroup>
+                      <col style={{ width: '95px' }} />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>계약서 전송일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>계약서 열람일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>전자서명 일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>서명자 정보</th>
+                        <td>홍길동(Ka12345)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="employment-bx">
+                  <div className="employment-num">No.2</div>
+                  <table className="info-table">
+                    <colgroup>
+                      <col style={{ width: '95px' }} />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>계약서 전송일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>계약서 열람일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>전자서명 일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>서명자 정보</th>
+                        <td>홍길동(Ka12345)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="employment-bx">
+                  <div className="employment-num">No.1</div>
+                  <table className="info-table">
+                    <colgroup>
+                      <col style={{ width: '95px' }} />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>계약서 전송일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>계약서 열람일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>전자서명 일시</th>
+                        <td>2025-01-03 02:28:00</td>
+                      </tr>
+                      <tr>
+                        <th>서명자 정보</th>
+                        <td>홍길동(Ka12345)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="employment-bx">
+                  <button className="btn-form block grey">더보기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sub-cont-wrap">
+            <div className="sub-cont-item-wrap">
+              <div className="sub-cont-tit-wrap">
+                <div className="sub-cont-tit">등록 및 수정 이력</div>
+              </div>
+              <div className="sub-item-bx">
+                <table className="info-table">
+                  <colgroup>
+                    <col style={{ width: '95px' }} />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>등록자/등록일</th>
+                      <td>
+                        <div className="data-list">
+                          <span>홍길동</span>
+                          <span>2025.08.06</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>수정자/수정일</th>
+                      <td>
+                        <div className="data-list">
+                          <span>홍길동</span>
+                          <span>2025.08.06</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="content-pagination">
@@ -363,5 +491,5 @@ export default function ContractDetail() {
         </button>
       </div>
     </>
-  );
+  )
 }
