@@ -30,9 +30,9 @@ export default function DeductionAddSheet() {
             </div>
             <div className=" bottom-sheet-body">
               <div className="s-txt mt15">
-                ※ 정확한 급여 계산을 위해 근무기간을 반드시 입력해 주세요.
-                4대보험 대상자에 한해 공제액을 입력하며, 저장 시 급여 내역이
-                자동으로 계산됩니다.
+                ※ 정확한 급여 계산을 위해 <b>근무기간을 반드시 입력</b>해
+                주세요. <b>4대보험 대상자에 한해 공제액을 입력</b>하며, 저장 시
+                급여 내역이 자동으로 계산됩니다.
               </div>
               <div className="sheet-data-wrap">
                 <div className="sheet-data-filed">
