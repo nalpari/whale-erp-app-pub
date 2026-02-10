@@ -1,7 +1,23 @@
+'use client'
+import { useRouter } from 'next/navigation'
+
 export default function PartTimerPayStub() {
+  const router = useRouter()
   return (
     <div className="container sub">
       <div className="sub-content-body">
+        <button
+          className="work-time-edit "
+          onClick={() => router.push('/parttimer/1/time')}
+        >
+          <div className="work-time-edit-tit">
+            <i className="time-edit-icon"></i>
+            <span>근무시간 수정</span>
+          </div>
+          <div className="auto-right">
+            <i className="contract-arr"></i>
+          </div>
+        </button>
         <div className="sub-cont-wrap">
           <div className="sub-cont-item-wrap">
             <div className="sub-cont-tit-wrap">
@@ -377,7 +393,7 @@ export default function PartTimerPayStub() {
             <div className="sub-item-bx">
               <table className="info-table">
                 <colgroup>
-                  <col style={{ width: "95px" }} />
+                  <col style={{ width: '95px' }} />
                   <col />
                 </colgroup>
                 <tbody>
@@ -406,5 +422,5 @@ export default function PartTimerPayStub() {
         </div>
       </div>
     </div>
-  );
+  )
 }

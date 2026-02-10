@@ -1,8 +1,8 @@
-"use client";
-import { useRouter } from "next/navigation";
+'use client'
+import { useRouter } from 'next/navigation'
 
 export default function PartTimerPayDetail() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <>
       <div className="container sub">
@@ -15,18 +15,6 @@ export default function PartTimerPayDetail() {
           </button>
         </div>
         <div className="sub-content-body">
-          <button
-            className="work-time-edit "
-            onClick={() => router.push("/parttimer/1/time")}
-          >
-            <div className="work-time-edit-tit">
-              <i className="time-edit-icon"></i>
-              <span>근무시간 수정</span>
-            </div>
-            <div className="auto-right">
-              <i className="contract-arr"></i>
-            </div>
-          </button>
           <div className="sub-cont-wrap">
             <div className="sub-cont-item-wrap">
               <div className="sub-item-bx">
@@ -65,19 +53,6 @@ export default function PartTimerPayDetail() {
               <div className="sub-item-bx">
                 <div className="data-filed">
                   <div className="filed-tit">
-                    직원명 <span className="imp">*</span>
-                  </div>
-                  <div className="block">
-                    <select name="" id="" className="select-form" disabled>
-                      <option value="1"> 홍길동</option>
-                    </select>
-                  </div>
-                  <div className="s-txt mt10">BIM1001</div>
-                </div>
-              </div>
-              <div className="sub-item-bx">
-                <div className="data-filed">
-                  <div className="filed-tit">
                     급여 지급월 <span className="imp">*</span>
                   </div>
                   <div className="block mb8">
@@ -98,55 +73,65 @@ export default function PartTimerPayDetail() {
               <div className="sub-item-bx">
                 <div className="data-filed">
                   <div className="filed-tit">
-                    근무기간 <span className="imp">*</span>
+                    직원명 <span className="imp">*</span>
                   </div>
-                  <div className="flex g6 mb8">
-                    <div className="date-picker-custom">
-                      <input
-                        type="text"
-                        className="date-picker-input"
-                        defaultValue="2025.10.28"
-                      />
-                    </div>
-                    <span>~</span>
-                    <div className="date-picker-custom">
-                      <input
-                        type="text"
-                        className="date-picker-input"
-                        defaultValue="2025.10.28"
-                      />
-                    </div>
+                  <div className="block">
+                    <select name="" id="" className="select-form" disabled>
+                      <option value="1"> 홍길동</option>
+                    </select>
+                  </div>
+                  <div className="s-txt mt10">BIM1001</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sub-cont-wrap">
+            <div className="sub-cont-item-wrap">
+              <div className="sub-cont-tit-wrap">
+                <div className="sub-cont-tit">
+                  근무기간 / 4대보험 공제액 설정 <span className="imp">*</span>
+                </div>
+                <div className="auto-right ">
+                  <button className="sub-edit-btn">
+                    <i className="sub-arr-btn"></i>
+                  </button>
+                </div>
+              </div>
+              <div className="sub-item-bx">
+                <div className="data-filed">
+                  <div className="filed-tit">근무기간</div>
+                  <div className="block">
+                    <input
+                      type="text"
+                      className="input-frame"
+                      defaultValue="2025.10.28 ~ 2025.11.28"
+                      readOnly
+                    />
                   </div>
                 </div>
               </div>
               <div className="sub-item-bx">
-                <dl className="pay-data-guide">
-                  <dt>4대보험 공제</dt>
-                  <dd>
-                    <div className="guide-filed-tit">국민연금(원)</div>
-                    <div className="block">
-                      <input type="text" className="input-frame al-r" />
+                <div className="data-filed">
+                  <div className="filed-tit">4대보험 공제</div>
+                  <div className="pay-data-list">
+                    <div className="pay-data-item">
+                      <div className="pay-data-item-tit">국민연금(원)</div>
+                      <div className="pay-data-item-value">38,000</div>
                     </div>
-                  </dd>
-                  <dd>
-                    <div className="guide-filed-tit">건강보험(원)</div>
-                    <div className="block">
-                      <input type="text" className="input-frame al-r" />
+                    <div className="pay-data-item">
+                      <div className="pay-data-item-tit">건강보험(원)</div>
+                      <div className="pay-data-item-value">38,000</div>
                     </div>
-                  </dd>
-                  <dd>
-                    <div className="guide-filed-tit">고용보험(원)</div>
-                    <div className="block">
-                      <input type="text" className="input-frame al-r" />
+                    <div className="pay-data-item">
+                      <div className="pay-data-item-tit">고용보험(원)</div>
+                      <div className="pay-data-item-value">38,000</div>
                     </div>
-                  </dd>
-                  <dd>
-                    <div className="guide-filed-tit">장기요양보험(원)</div>
-                    <div className="block">
-                      <input type="text" className="input-frame al-r" />
+                    <div className="pay-data-item">
+                      <div className="pay-data-item-tit">장기요양보험(원)</div>
+                      <div className="pay-data-item-value">38,000</div>
                     </div>
-                  </dd>
-                </dl>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -155,12 +140,11 @@ export default function PartTimerPayDetail() {
       <div className="content-pagination flex g8">
         <button
           className="btn-form block sky brd"
-          onClick={() => router.push("/parttimer/1/stub")}
+          onClick={() => router.push('/parttimer/1/stub')}
         >
           급여내역 미리보기
         </button>
-        <button className="btn-form block blue">저장하기</button>
       </div>
     </>
-  );
+  )
 }
