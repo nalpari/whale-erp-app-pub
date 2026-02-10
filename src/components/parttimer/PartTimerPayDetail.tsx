@@ -1,8 +1,12 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import { useBottomSheetControler } from '@/store/useBottomSheetControler'
 
 export default function PartTimerPayDetail() {
   const router = useRouter()
+  const setDeductionAddSheet = useBottomSheetControler(
+    (state) => state.setDeductionAddSheet,
+  )
   return (
     <>
       <div className="container sub">
@@ -92,7 +96,10 @@ export default function PartTimerPayDetail() {
                   근무기간 / 4대보험 공제액 설정 <span className="imp">*</span>
                 </div>
                 <div className="auto-right ">
-                  <button className="sub-edit-btn">
+                  <button
+                    className="sub-edit-btn"
+                    onClick={() => setDeductionAddSheet(true)}
+                  >
                     <i className="sub-arr-btn"></i>
                   </button>
                 </div>
